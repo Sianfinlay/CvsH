@@ -1,0 +1,30 @@
+<head>
+  <title>CvsH</title>
+</head>
+
+<template name="main">
+
+<main>
+	{{> yield}}
+</main>
+
+<footer>
+	<p>Copyright Sian</p>
+</footer>
+
+</template>
+
+
+<template name="header_home">
+	<img src="/images/logo.svg" class="logo">	
+</template>
+
+<template name="home">
+{{> header_home}}
+  	<button>Click Me</button>
+  	<p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="register">
+	<h2>Register</h2>
+</template>

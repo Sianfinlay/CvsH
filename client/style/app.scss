@@ -1,0 +1,137 @@
+@import "{wolves:bourbon}/bourbon";
+@import "grid-settings";
+@import "{wolves:neat}/neat";
+
+body{
+	margin: 0;
+  	font-family:'Roboto', arial, sans-serif;
+  	font-size: rem(18);
+  	color: #535353;
+  	display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
+
+	background-color: #fff;
+	background-image: url("/images/bg@2x.png");
+	background-size: cover;
+	background-position: center rem(0);
+	background-repeat: no-repeat;
+	section.main {
+		@include outer-container;
+		min-height: 100%;
+		margin-top: rem(45);
+		flex: 1;
+
+		.logo {
+
+			display: block;
+			margin: 0 auto;
+			width: 300px;
+			height: auto;
+		}
+		div.register_login{
+			@include span-columns(6);
+			@include omega ();
+			@include shift(3);
+			display: block;
+			margin-top: rem(48);
+
+			color: #464646;
+			font-size: rem(35);
+			font-family: 'Dosis', arial, sans-serif;
+			font-weight: 600;
+			line-height: 0;
+
+			.btn{
+				@include span-columns(2.5 of 6);
+			}
+			.or{
+				@include span-columns(1 of 6);
+			}
+			button {
+				border-radius: rem(8);
+				width: 100%;
+				height: rem(80);
+				border: none;
+
+				font-family: 'Dosis', arial, sans-serif;
+				font-weight: 600;
+				color: #fff;
+				font-size: rem(18);
+
+				&:focus {outline: 0;}
+
+			}
+			.signup {
+					background: #9300F3;
+					box-shadow: 0px 5px 0px 0px #F600FF;
+
+					&:hover {
+				 		background: tint(#9300F3, 25%);
+					}
+
+					&:active {
+						background: shade(#9300F3, 25%);
+					}
+			}
+			.login{
+				background: #F600FF;
+				box-shadow: 0px 5px 0px 0px #4E1D6D;
+
+				&:hover {
+				 		background: tint(#F600FF, 25%);
+					}
+				&:active {
+				 		background: shade(#F600FF, 25%);
+					}
+			}
+			p{
+				text-align: center;
+			}
+		}
+
+		section.intro {
+			@include span-columns(6);
+			@include omega ();
+			@include shift(3);
+
+			margin-top: rem(40);
+			text-align: center;
+		}
+	}
+
+	footer {
+		background-color: #fff;
+		height: 50px;
+		width: 100%;
+		@include outer-container;
+		div.social {
+			@include shift(3);
+			span {
+				position: relative;
+				bottom: 10px;
+			}
+
+			i.fa {
+				font-size: rem(45);
+			}
+			.fa-facebook-square {
+					color: #3B5998;
+			}
+			.fa-twitter-square {
+				color: #4099FF;
+			}
+		}
+		
+	}
+
+	section.avatar {
+		position: absolute;
+		top: rem(90);
+		img{
+			position: absolute;
+			left: 0;
+			height: rem(500);
+		}
+	}
+}

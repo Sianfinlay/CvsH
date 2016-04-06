@@ -1,0 +1,67 @@
+<head>
+  <title>CvsH</title>
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,600,300|Roboto:400,400italic,700,700italic,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+<template name="app_layout">
+
+{{> avatar}}
+{{>hexabunnies}}
+
+<section class="main">
+	{{> yield}}
+</section>
+
+<footer>
+	<div class="social">
+		<span>Follow Us @</span>
+		<a href="#" title="Follow as on Facebook"><i class="fa fa-facebook-square"></i></a> 
+		<a href="#" title="Follow as on Twitter"><i class="fa fa-twitter-square"></i></a>
+	</div>
+	
+</footer>
+
+</template>
+
+
+<template name="header">
+	<img src="/images/logo.svg" class="logo">	
+</template>
+
+<template name="Home">
+	{{> header}}
+	{{> login_sign}}
+
+	<section class="intro">
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+	</section>
+
+</template>
+
+<template name="login_sign">
+	<div class="register_login">
+		<div class="btn"><button class="signup">Join Now</button></div>
+		<div class="or"><p>OR</p></div>
+		<div class="btn"><button class="login">Continue The Fight</button></div>
+	</div>
+</template>
+
+<template name="account">
+	
+</template>
+
+<template name="avatar">
+	<section class="avatar">
+		<img src="/images/ava_base.svg" class="ava_base">
+		<img src="/images/ava_outfit.svg" class="ava_outfit">
+		<img src="/images/ava_hair.svg" class="ava_hair">
+	</section>	
+</template>
+
+<template name="hexabunnies">
+	<section class="hexabunnies">
+		<img src="/images/hexabunnies.svg" class="ava_base">
+	</section>	
+</template>
