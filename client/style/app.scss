@@ -21,7 +21,7 @@ body{
 		min-height: 100%;
 		margin-top: rem(45);
 		flex: 1;
-
+		height: 100%;
 		.logo {
 
 			display: block;
@@ -39,7 +39,7 @@ body{
 			color: #464646;
 			font-size: rem(35);
 			font-family: 'Dosis', arial, sans-serif;
-			font-weight: 600;
+			font-weight: 800;
 			line-height: 0;
 
 			.btn{
@@ -55,7 +55,7 @@ body{
 				border: none;
 
 				font-family: 'Dosis', arial, sans-serif;
-				font-weight: 600;
+				font-weight: 800;
 				color: #fff;
 				font-size: rem(18);
 
@@ -63,26 +63,26 @@ body{
 
 			}
 			.signup {
-					background: #9300F3;
-					box-shadow: 0px 5px 0px 0px #F600FF;
+					background: #A400EB;
+					box-shadow: 0px 5px 0px 0px #FF00FF;
 
 					&:hover {
-				 		background: tint(#9300F3, 25%);
+				 		background: tint(#A400EB, 25%);
 					}
 
 					&:active {
-						background: shade(#9300F3, 25%);
+						background: shade(#A400EB, 25%);
 					}
 			}
 			.login{
-				background: #F600FF;
+				background: #FF00FF;
 				box-shadow: 0px 5px 0px 0px #4E1D6D;
 
 				&:hover {
-				 		background: tint(#F600FF, 25%);
+				 		background: tint(#FF00FF, 25%);
 					}
 				&:active {
-				 		background: shade(#F600FF, 25%);
+				 		background: shade(#FF00FF, 25%);
 					}
 			}
 			p{
@@ -94,44 +94,62 @@ body{
 			@include span-columns(6);
 			@include omega ();
 			@include shift(3);
-
 			margin-top: rem(40);
 			text-align: center;
 		}
-	}
 
-	footer {
-		background-color: #fff;
-		height: 50px;
-		width: 100%;
-		@include outer-container;
-		div.social {
+		footer {
+			width: 100%;
+			height: 50px;
+			font-size: rem(12);
+			@include span-columns(6);
 			@include shift(3);
-			span {
-				position: relative;
-				bottom: 10px;
-			}
+			position: relative;
+			top: 50px;
+			section.social {
+				span {
+					position: relative;
+					bottom: 10px;
+				}
+				.sign {
+					
+				}
 
-			i.fa {
-				font-size: rem(45);
+				i.fa {
+					font-size: rem(45);
+					padding: 0 10px;
+				}
+				.fa-facebook-square {
+						color: #3B5998;
+				}
+				.fa-twitter-square {
+					color: #4099FF;
+				}
 			}
-			.fa-facebook-square {
-					color: #3B5998;
-			}
-			.fa-twitter-square {
-				color: #4099FF;
-			}
-		}
-		
+			
 	}
+	}
+
+	
 
 	section.avatar {
-		position: absolute;
+		z-index: -1;
 		top: rem(90);
+		position: absolute;
+		left: rem(0);
 		img{
 			position: absolute;
-			left: 0;
 			height: rem(500);
 		}
 	}
+	section.hexabunnies {
+		z-index: -1;
+		top: rem(50);
+		position: absolute;
+		right: rem(35);
+		img{				
+			height: rem(400);
+		}
+	}
+	
 }
