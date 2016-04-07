@@ -41,10 +41,23 @@ body{
 				line-height: 0;
 			}
 			@media only screen and (min-width: 601px){
+				margin-top: rem(150);
+			}
+			@media only screen and (min-height: 600px){
 				margin-top: rem(0);
 			}
-			@media only screen and (min-width: 993px){
+			@media only screen and (min-width: 700px){
 				margin-top: rem(0);
+			}
+
+			@media only screen and (min-width: 993px) and (min-height: 700px){
+				margin-top: rem(0);
+			}
+			@media only screen and (min-width: 710px) and (min-height: 993px){
+				margin-top: rem(150);
+			}
+			@media only screen and (min-width: 1000px) and (min-height: 700px){
+				margin-top: rem(150);
 			}
 			@media only screen and (min-width: 1200px){
 				margin-top: rem(0);

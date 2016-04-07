@@ -1,8 +1,9 @@
 // login and sign up
 $input-focus-color: #F39300;
 $input-success-color: #00F393;
-div#modal-signup {
+div.signup_login_modal {
 	div.modal-content{
+		.row {margin-bottom: 0;}
 		h4{
 			color: #4A285D;
 		}
@@ -16,6 +17,35 @@ div#modal-signup {
   				&:not(.filled-in) + label:after {
   					left: 100%;
   				}
+			}	
+			.social_head {
+				margin-bottom: rem(25);
+			}
+			.social_space {
+				margin-bottom: rem(20);
+			}
+			.social_btn {
+			padding: 0;
+			width: 100%;
+			}
+			.face_btn {
+				background-color: #3B5998;
+			}
+			.twitter_btn {
+				background-color: #4099FF;
+			}	
+		}
+		.normal_signup {
+
+			@media only screen and (min-width: 1000px) {
+				border-bottom: none;
+				border-right: 1px solid #979797;
+			}
+		}
+		.social_login {
+			@media only screen and (min-width: 1000px) {
+				border-top: none;
+				border-left: 1px solid #979797;
 			}
 		}
 	}
