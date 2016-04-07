@@ -1,0 +1,58 @@
+
+
+<template name="login_sign">
+	<div class="row">
+		<section class="register_login col l8 offset-l2 m8 offset-m2 s8 offset-s2">
+				<button data-target="modal-signup" class="signup waves-effect modal-trigger button col l5 m5 s12">Join Now</button>
+			<div class="or col l2 m2 s12">
+				<p>OR</p>
+			</div>
+				<button data-target="modal-login" class="login waves-effect modal-trigger button col l5 m5 s12">Continue The Fight</button>
+		</section>	
+	</div>
+</template>
+
+<template name="modalSignup_login">
+	<div id="modal-signup" class="modal modal-fixed-footer">
+		<div class="modal-content">
+	      <h4 class="center-align">Join Now</h4>
+	      <div class="row">
+	      	<section class="normal_signup col s6">
+	      		<div class="input-field col s12">
+	      			<i class="material-icons prefix">face</i>
+		          	<input id="username" type="text" class="validate">
+		          	<label for="username" data-success="Good name!">Nickname(In game)</label>
+		        </div>
+		        <div class="input-field col s12">
+		        	<i class="material-icons prefix">mail_outline</i>
+		          	<input id="email" type="email" class="validate">
+		          	<label for="email" data-error="Try again?" data-success="Great Job!">Email Address</label>
+		        </div>
+		        <div class="input-field col s12">
+		        	<i class="material-icons prefix">lock</i>
+		          	<input id="password" type="password" class="validate">
+		          	<label for="password" data-success="Secure!">Password</label>
+		        </div>
+		        <p class="col s12 parent-per">
+			      	<input type="checkbox" id="parent" />
+			      	<label for="parent">Please ask permission before joining</label>
+			    </p>
+	      	</section>
+	      </div>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-gree btn-flat">Finish and Join</a>
+	      <a href="#!" class="modal-action modal-close waves-effect waves-oran btn-flat">Close</a>
+	    </div>
+	</div>
+	<div id="modal-login" class="modal modal-fixed-footer">
+		<div class="modal-content">
+	      <h4>Modal Header</h4>
+	      <p>A bunch of text</p>
+	    </div>
+	    <div class="modal-footer">
+	      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+	    </div>
+	</div>
+
+</template>

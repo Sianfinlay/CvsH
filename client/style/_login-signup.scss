@@ -1,0 +1,36 @@
+// login and sign up
+$input-focus-color: #F39300;
+$input-success-color: #00F393;
+div#modal-signup {
+	div.modal-content{
+		h4{
+			color: #4A285D;
+		}
+		section{
+			p.parent-per{
+				label {
+					padding-left: rem(5);
+					padding-right: rem(10);
+				}
+				label:before,
+  				&:not(.filled-in) + label:after {
+  					left: 100%;
+  				}
+			}
+		}
+	}
+	div.modal-footer {
+		.waves-effect.waves-gree .waves-ripple {
+				background-color: #00F393;
+		}
+		.waves-effect.waves-oran .waves-ripple {
+				background-color: #F39300;
+		}
+		.btn, .btn-flat {
+			float: left;
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}
