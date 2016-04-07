@@ -23,3 +23,5 @@ wolves:bourbon
 wolves:neat
 standard-minifier-css
 standard-minifier-js
+poetic:materialize-scss
+arturs:konva
