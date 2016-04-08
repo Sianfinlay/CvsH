@@ -46,5 +46,13 @@
  				Router.go('/account');
  			}
  		});
- 	}
+ 	},
+ 	'click .face_btn':function(event){
+        event.preventDefault();
+        Meteor.loginWithFacebook(function(err){
+            if(!err) {
+                Router.go('/account');
+            }
+        });
+    }
  });

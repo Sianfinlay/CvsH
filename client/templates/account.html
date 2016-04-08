@@ -3,6 +3,7 @@
 <template name="account">
 	<div>
 		{{#if currentUser}}
+		<p>user:{{currentUser.username}}</p>
         <a href="#" class="logout">Logout</a>
     	{{/if}}
 	</div>
