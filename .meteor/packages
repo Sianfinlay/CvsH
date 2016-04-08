@@ -25,3 +25,7 @@ standard-minifier-css
 standard-minifier-js
 poetic:materialize-scss
 arturs:konva
+accounts-password
+accounts-facebook
+accounts-twitter
+accounts-ui

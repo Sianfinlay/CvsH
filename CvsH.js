@@ -2,10 +2,9 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
-  Template.modalSignup_login.onRendered( function(){
+  Template.Signup.onRendered( function(){
     $('.modal-trigger').leanModal();
   });
-
  /* Template.home.helpers({
     counter: function () {
       return Session.get('counter');

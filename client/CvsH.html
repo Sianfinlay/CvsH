@@ -7,7 +7,9 @@
 </head>
 
 <template name="app_layout">
-
+{{#if currentUser}}
+	{{> header}}
+{{/if}}
 
 <main class="container">
 	{{> yield}}
@@ -15,61 +17,6 @@
 {{> avatar}}
 {{> hexabunnies}}
 {{> footer}}
-</template>
-
-
-<template name="header_hm">
-	<div class="row">
-		<div class="col l6 offset-l3 m8 offset-m2 s8 offset-s2">
-			<img src="/images/logo.svg" class="logo">	
-		</div>
-	</div>		
-</template>
-
-<template name="footer">
-	<footer class="container">
-		<div class="row">
-			<section class="col l8 offset-l2 m8 offset-m2 s8 offset-s2">
-				<section class="social col l6 m7 s12 center-align">
-					<span>Follow Us @</span>
-					<a href="#" title="Follow as on Facebook"><i class="fa fa-facebook-square"></i></a> 
-					<a href="#" title="Follow as on Twitter"><i class="fa fa-twitter-square"></i></a>
-				</section>
-				<span class="sign col l6  m5 s12 center-align">Lovingly Designed By Sian Finlay</span>
-			</section>
-		</div>
-		
-	</footer>
-</template>
-
-<template name="Home">
-	{{> header_hm}}
-	{{> login_sign}}
-	{{> modalSignup_login}}
-	<div class="row">
-		<section class="intro col l8 offset-l2 m8 offset-m2 s8 offset-s2">
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-		</section>
-	</div>	
-
-</template>
-
-<template name="account">
-	<div id="test-canvas"></div>
-</template>
-
-<template name="avatar">
-	<section class="avatar">
-		<img src="/images/ava_base.svg" class="ava_base">
-		<img src="/images/ava_outfit.svg" class="ava_outfit">
-		<img src="/images/ava_hair.svg" class="ava_hair">
-	</section>	
-</template>
-
-<template name="hexabunnies">
-	<section class="hexabunnies">
-		<img src="/images/hexabunnies.svg" class="ava_base">
-	</section>	
 </template>
 
 
