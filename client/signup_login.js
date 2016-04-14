@@ -11,6 +11,16 @@
         });
  	}
  });
+ Template.customisation.events({
+    'click .logout': function(event){
+        event.preventDefault();
+        Meteor.logout( function(err){
+            if(!err) {
+                Router.go('/');
+            }
+        });
+    }
+ });
 
  Template.Signup.events({
     'submit .signup': function (event) {
@@ -29,7 +39,7 @@
 
         Accounts.createUser(user, function(err){
         	if(!err) {
-        		Router.go('/account');
+        		Router.go('/customisation');
         	}
         });
         //works!
@@ -38,7 +48,7 @@
         event.preventDefault();
         Meteor.loginWithFacebook(function(err){
             if(!err) {
-                Router.go('/account');
+                Router.go('/customisation');
             }
         });
     }

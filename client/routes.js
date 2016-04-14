@@ -13,6 +13,11 @@ Router.route('/account', {
  	template: 'account',
     title: 'Account'
 });
+Router.route('/customisation', {
+	name: 'Customisation',
+ 	template: 'customisation',
+    title: 'Customisation'
+});
 
 Router.after(function(){
     if (this.route.options.title)

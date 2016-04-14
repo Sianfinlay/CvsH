@@ -1,0 +1,10 @@
+<!-- customisation template -->
+
+<template name="customisation">
+	<div>
+		{{#if currentUser}}
+		<p>user:{{currentUser.username}}</p>
+        <a href="#" class="logout">Logout</a>
+    	{{/if}}
+	</div>
+</template>
