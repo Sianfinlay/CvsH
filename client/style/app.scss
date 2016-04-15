@@ -1,3 +1,18 @@
+//variables
+
+$dark-purple: #4A285D;
+$mid-purple: #A400EB;
+$light-purple: #FF00FF;
+$city-orange: #F39300;
+$city-green: #00F393;
+
+$facebook-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+$paragraph-grey: #535353;
+$border-grey: #979797;
+
+
 @import "{wolves:bourbon}/bourbon";
 @import "login-signup";
 @import "{poetic:materialize-scss}/sass/materialize.scss";
@@ -7,7 +22,7 @@ body{
 		margin: 0;
 	  	font-family:'Roboto', arial, sans-serif;
 	  	font-size: rem(18);
-	  	color: #535353;
+	  	color: $paragraph-grey;
 	  	display: flex;
 	  	min-height: 100vh;
 	  	flex-direction: column;
@@ -19,6 +34,47 @@ body{
 	}
 	@media only screen and (min-width: 993px){
 		background-image: url("/images/bg.svg");
+	}
+
+	header.user_header{
+		margin-top: 20px;
+
+		section{
+			div{
+				color: $dark-purple;
+				@media only screen and (min-width: 0px){
+					font-size: rem(12);
+				}
+				@media only screen and (min-width: 601px){
+					font-size: rem(18);
+				}
+			}
+			.dropdown-button {
+				color: $mid-purple;
+				background-color: transparent;
+
+				&:hover{
+					color: tint($mid-purple, 25%);
+				}
+				&:active{
+					color: shade($mid-purple, 25%);
+				}
+				i.right {
+					@media only screen and (min-width: 0px){
+					font-size: rem(18);
+					}
+					@media only screen and (min-width: 601px){
+						font-size: rem(18);
+					}
+				}
+
+			}
+			.dropdown-content{
+				a{
+					color: $city-orange;
+				}
+			}
+		}
 	}
 
 	main {
@@ -78,26 +134,26 @@ body{
 
 			}
 			.signup {
-					background: #A400EB;
+					background-color: $mid-purple;
 					box-shadow: 0px 5px 0px 0px #FF00FF;
 
 					&:hover {
-				 		background: tint(#A400EB, 25%);
+				 		background: tint($mid-purple, 25%);
 					}
 
 					&:active {
-						background: shade(#A400EB, 25%);
+						background: shade($mid-purple, 25%);
 					}
 			}
 			.login{
-				background: #FF00FF;
+				background: $light-purple;
 				box-shadow: 0px 5px 0px 0px #4E1D6D;
 
 				&:hover {
-				 		background: tint(#FF00FF, 25%);
+				 		background: tint($light-purple, 25%);
 					}
 				&:active {
-				 		background: shade(#FF00FF, 25%);
+				 		background: shade($light-purple, 25%);
 					}
 			}
 			p{
@@ -109,8 +165,41 @@ body{
 			margin-top: rem(25);
 			text-align: center;
 		}
+		section.custom_slide {
+			@media only screen and (min-width: 0px){
+				background-color: #fff;
+				min-height: 400px;
+				max-height: 500px;
+				border-radius: 5px;
+				border: 3px $dark-purple solid;
+				margin-top: rem(300);
+			}
+			@media only screen and (min-width: 601px){
+				margin-top: 0;
+			}
+			.tabs{
+				font-family: 'Dosis', arial, sans-serif;
+				font-size: rem(30);
+				
+				li a{
+					color: $city-orange;
+					&:hover{
+						color: tint($city-orange, 45%);
+					}
 
-		
+				}
+				.active{
+						color: $city-green;
+						&:hover{
+							color: tint($city-green, 45%);
+						}
+					}
+			}
+			.indicator {
+				background-color: $city-green;
+			}
+		}
+	
 	}
 
 	footer {
@@ -133,10 +222,10 @@ body{
 						font-size: rem(45);
 					}
 					.fa-facebook-square {
-						color: #3B5998;
+						color: $facebook-blue;
 					}
 					.fa-twitter-square {
-						color: #4099FF;
+						color: $twitter-blue;
 					}
 				}
 			}
@@ -184,6 +273,38 @@ body{
 		}
 		@media only screen and (min-width: 1200px){
 			top: rem(90);
+			left: rem(0);
+		}
+		
+	}
+	section.avatar_customise {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			top: rem(0);
+			position: relative;
+			left: 80px;
+
+			img{
+				position: absolute;
+				height: rem(300);
+			}
+		}
+		@media only screen and (min-width: 601px){
+			top: rem(0);
+			left: rem(-85);
+			img{
+				position: absolute;
+				height: rem(500);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+			top: rem(0);
+			left: rem(-85);
+
+		}
+		@media only screen and (min-width: 1200px){
+			top: rem(0);
 			left: rem(0);
 		}
 		

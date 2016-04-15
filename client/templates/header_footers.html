@@ -1,13 +1,46 @@
 <!-- header and footer templates -->
 <template name="header">
+	<header class="user_header">
+		<div class="row">
+			<section class="col l2 offset-l1 m3 offset-m1 s6 offset-s1">
+				<img src="/images/logo.svg" class="logo">	
+			</section>
+			<section class="col l3 offset-l5 m4 offset-m3 s4 ">
+				{{#if currentUser}}
+				<div class="right-align">
+						Welcome, {{currentUser.username}}{{currentUser.profile.name}}		
+				</div>
+				{{> dropdown_nav}}
+				{{else}}
+					<a href="/" >Sign In</a>
+		    	{{/if}}
+
+			</section>
+		</div>
+	</header>
 	
+</template>
+
+<template name="dropdown_nav">
+	<div class="right">
+		<a href="#" class="dropdown-button" data-activates='dropdown-nav'>
+			<i class="material-icons right">settings</i>Settings
+		</a>
+		<ul id='dropdown-nav' class='dropdown-content'>
+		    <li><a href="/account">Account</a></li>
+		    <li><a href="/levels">Levels</a></li>
+		    <li><a href="/customise">Customise</a></li>
+		    <li class="divider"></li>
+			<li><a href="#" class="logout">Log Out</a></li>
+		</ul>
+	</div>
 </template>
 
 <template name="header_hm">
 	<div class="row">
-		<div class="col l6 offset-l3 m8 offset-m2 s8 offset-s2">
+		<section class="col l6 offset-l3 m8 offset-m2 s8 offset-s2">
 			<img src="/images/logo.svg" class="logo">	
-		</div>
+		</section>
 	</div>		
 </template>
 

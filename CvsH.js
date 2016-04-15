@@ -5,18 +5,16 @@ if (Meteor.isClient) {
   Template.Signup.onRendered( function(){
     $('.modal-trigger').leanModal();
   });
- /* Template.home.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
+  Template.dropdown_nav.onRendered( function(){
+    $('.dropdown-button').dropdown({
+      belowOrigin: true
+    });
+  });
+  Template.custom_tabs.onRendered( function(){
+    $('ul.tabs').tabs();
   });
 
- Template.home.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });*/
+
 }
 
 if (Meteor.isServer) {

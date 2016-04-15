@@ -1,10 +1,28 @@
 <!-- customisation template -->
 
 <template name="customisation">
-	<div>
-		{{#if currentUser}}
-		<p>user:{{currentUser.username}}</p>
-        <a href="#" class="logout">Logout</a>
-    	{{/if}}
-	</div>
+	{{> header}}
+	<section class="avatar_customise">
+		{{> avatar}}
+	</section>
+	<main class="">
+		<div class="row">
+			<section class="custom_slide col l7 offset-l4 m6 offset-m5 s10 offset-s1">
+				{{> custom_tabs}}
+			</section>
+		</div>
+	</main>
+</template>
+
+<template name="custom_tabs">
+	<div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#test1">Skin</a></li>
+        <li class="tab col s3"><a href="#test2">Hair</a></li>
+        <li class="tab col s3"><a href="#test3">Outfit</a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12">Test 1</div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
 </template>

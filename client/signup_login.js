@@ -1,7 +1,7 @@
  //signup and login events
 
 //temporary
- Template.account.events({
+ Template.dropdown_nav.events({
  	'click .logout': function(event){
  		event.preventDefault();
  		Meteor.logout( function(err){
@@ -10,16 +10,6 @@
         	}
         });
  	}
- });
- Template.customisation.events({
-    'click .logout': function(event){
-        event.preventDefault();
-        Meteor.logout( function(err){
-            if(!err) {
-                Router.go('/');
-            }
-        });
-    }
  });
 
  Template.Signup.events({

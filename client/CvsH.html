@@ -7,15 +7,9 @@
 </head>
 
 <template name="app_layout">
-{{#if currentUser}}
-	{{> header}}
-{{/if}}
 
-<main class="container">
+
 	{{> yield}}
-	{{> avatar}}
-	{{> hexabunnies}}
-</main>
 
 {{> footer}}
 </template>

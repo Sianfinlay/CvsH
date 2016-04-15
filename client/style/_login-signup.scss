@@ -5,7 +5,7 @@ div.signup_login_modal {
 	div.modal-content{
 		.row {margin-bottom: 0;}
 		h4{
-			color: #4A285D;
+			color: $dark-purple;
 		}
 		section{
 			p.parent-per{
@@ -29,32 +29,32 @@ div.signup_login_modal {
 			width: 100%;
 			}
 			.face_btn {
-				background-color: #3B5998;
+				background-color: $facebook-blue;
 			}
 			.twitter_btn {
-				background-color: #4099FF;
+				background-color: $twitter-blue;
 			}	
 		}
 		.normal_signup {
 
 			@media only screen and (min-width: 1000px) {
 				border-bottom: none;
-				border-right: 1px solid #979797;
+				border-right: 1px solid $border-grey;
 			}
 		}
 		.social_login {
 			@media only screen and (min-width: 1000px) {
 				border-top: none;
-				border-left: 1px solid #979797;
+				border-left: 1px solid $border-grey;
 			}
 		}
 	}
 	div.modal-footer {
 		.waves-effect.waves-gree .waves-ripple {
-				background-color: #00F393;
+				background-color: $city-green;
 		}
 		.waves-effect.waves-oran .waves-ripple {
-				background-color: #F39300;
+				background-color: $city-orange;
 		}
 		.btn, .btn-flat {
 			float: left;

@@ -1,15 +1,18 @@
 <!-- avatar and hexabunnies templates -->
 
 <template name="avatar">
+	
 	{{#if currentUser}}
-		<p> not yet implemented </p>
-	{{else}} 
-	<section class="avatar">
+		<img src="/images/dressup/skin/skin_3.svg" class="ava_base">
+		<img src="/images/dressup/outfit/dress_2.svg" class="ava_outfit">
+		<img src="/images/dressup/hair/hair_5_blonde.svg" class="ava_hair">
+	{{else}}
+
 		<img src="/images/ava_base.svg" class="ava_base">
 		<img src="/images/ava_outfit.svg" class="ava_outfit">
 		<img src="/images/ava_hair.svg" class="ava_hair">
-	</section>	
 	{{/if}}
+	
 </template>
 
 <template name="hexabunnies">
