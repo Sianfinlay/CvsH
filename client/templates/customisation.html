@@ -5,13 +5,20 @@
 	<main>
 	{{> user_avatar}}
 		<div class="row">
-			<section class="custom_slide col l7 offset-l4 m6 offset-m5 s10 offset-s1">
+			<form class="changeAvatar">
+				{{#each avatar}}
+					<input type="hidden" value="{{skin}}" name="altskin" />
+					<input type="hidden" value="{{outfit}}" name="altoutfit" />
+					<input type="hidden" value="{{hair}}" name="althair" />
+				{{/each}}
+				<section class="custom_slide col l7 offset-l4 m6 offset-m5 s10 offset-s1">
 				{{> custom_slider}}
-			</section>
-			<section class="avatar_btns col l7 offset-l4 m6 offset-m5 s10 offset-s1 right-align">
-				<a href="{{pathFor route='account'}}" class="cancel btn waves-effect waves-light ">Cancel<i class="material-icons right">send</i></a>
-				<button id="saveAvatar" class="btn waves-effect waves-light " type="submit" name="action">Submit<i class="material-icons right">send</i></button>
-			</section>
+				</section>
+				<section class="avatar_btns col l7 offset-l4 m6 offset-m5 s10 offset-s1 right-align">
+					<a href="{{pathFor route='account'}}" class="cancel btn waves-effect waves-light ">Cancel<i class="material-icons right">send</i></a>
+					<button id="saveAvatar" class="btn waves-effect waves-light " type="submit" name="action">Save<i class="material-icons right">send</i></button>
+				</section>
+			</form>
 			
 		</div>
 	</main>
