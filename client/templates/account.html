@@ -1,12 +1,12 @@
 <!-- account page -->
 
 <template name="account">
-	<div>
-		{{#if currentUser}}
-		<p>user:{{currentUser.username}}</p>
-        <a href="#" class="logout">Logout</a>
-    	{{/if}}
-	</div>
-	<div id="test-canvas"></div>
-	<script type="text/javascript" src="/js/animals.js"></script>
+	{{> header}}
+	<main>
+	{{> user_avatar}}
+		
+	</main>
+
+	<!--<div id="test-canvas"></div>
+	<script type="text/javascript" src="/js/animals.js"></script>-->
 </template>

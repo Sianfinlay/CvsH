@@ -1,0 +1,47 @@
+<template name="custom_slider">
+	<div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#Skin">Skin</a></li>
+        <li class="tab col s3"><a href="#Hair">Hair</a></li>
+        <li class="tab col s3"><a href="#Outfit">Outfit</a></li>
+      </ul>
+    </div>
+    <div id="Skin" class=" swiper-container">
+   		<div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+            <img src="/images/dressup/skin/skin_1.svg" class="ava_base">
+            <input type="radio" class="radio_item" value="skin_1" name="skin" id="skin1" />	
+            
+        </div>
+        <div class="swiper-slide">
+        	<img src="/images/dressup/skin/skin_2.svg" class="ava_base">
+            <input type="radio" class="radio_item" value="skin_2" name="skin" id="skin2" /> 
+            
+        </div>
+        <div class="swiper-slide">
+        	<img src="/images/dressup/skin/skin_3.svg" class="ava_base">
+            <input type="radio" class="radio_item" value="skin_3" name="skin" id="skin3" /> 
+            
+        </div>
+        <div class="swiper-slide">
+        	<img src="/images/dressup/skin/skin_4.svg" class="ava_base">
+            <input type="radio" class="radio_item" value="skin_4" name="skin" id="skin4" />
+            
+        </div>
+        <div class="swiper-slide">
+        	<img src="/images/dressup/skin/skin_5.svg" class="ava_base">
+            <input type="radio" class="radio_item" value="skin_5" name="skin" id="skin5" />            
+        </div>
+	    </div>
+	    <!-- If we need pagination -->
+	    <div class="swiper-pagination"></div>
+	    
+	    <!-- If we need navigation buttons -->
+	    <div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>
+	    
+	    </div>
+	    <div id="Hair" class="col s12">Test 2</div>
+	    <div id="Outfit" class="col s12">Test 3</div>
+</template>

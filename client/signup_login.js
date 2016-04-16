@@ -26,7 +26,6 @@
         	username:username,
         	createdAt: new Date()
         };
-
         Accounts.createUser(user, function(err){
         	if(!err) {
         		Router.go('/customisation');
@@ -36,6 +35,7 @@
     },
  	'click .face_btn':function(event){
         event.preventDefault();
+
         Meteor.loginWithFacebook(function(err){
             if(!err) {
                 Router.go('/customisation');

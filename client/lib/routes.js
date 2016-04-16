@@ -4,17 +4,17 @@ Router.configure({
 });
  
 Router.route('/', {
-	name: 'Home',
+	name: 'home',
  	template: 'Home',
     title: 'Home'
 });
 Router.route('/account', {
-	name: 'Account',
+	name: 'account',
  	template: 'account',
     title: 'Account'
 });
 Router.route('/customisation', {
-	name: 'Customisation',
+	name: 'customisation',
  	template: 'customisation',
     title: 'Customisation'
 });

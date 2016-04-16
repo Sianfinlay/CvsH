@@ -1,18 +1,29 @@
 <!-- avatar and hexabunnies templates -->
-
-<template name="avatar">
-	
+<template name="user_avatar">
 	{{#if currentUser}}
-		<img src="/images/dressup/skin/skin_3.svg" class="ava_base">
-		<img src="/images/dressup/outfit/dress_2.svg" class="ava_outfit">
-		<img src="/images/dressup/hair/hair_5_blonde.svg" class="ava_hair">
+		{{#each avatar}}
+			<section class="avatar_customise">
+			
+				<img src="/images/dressup/skin/{{skin}}.svg" class="base">
+				<img src="/images/dressup/outfit/{{outfit}}.svg" class="outfit">
+				<img src="/images/dressup/hair/{{hair}}.svg" class="hair">
+			
+			</section>
+			<section class="avatar_customise_mobile">
+			
+				<img src="/images/dressup/skin/{{skin}}.svg" class="ava_base">
+				<img src="/images/dressup/outfit/{{outfit}}.svg" class="ava_outfit">
+				<img src="/images/dressup/hair/{{hair}}.svg" class="ava_hair">
+			
+			</section>
+		{{/each}}
 	{{else}}
-
+	<section class="avatar_container">
 		<img src="/images/ava_base.svg" class="ava_base">
 		<img src="/images/ava_outfit.svg" class="ava_outfit">
 		<img src="/images/ava_hair.svg" class="ava_hair">
+	</section>
 	{{/if}}
-	
 </template>
 
 <template name="hexabunnies">

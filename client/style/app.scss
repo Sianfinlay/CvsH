@@ -15,10 +15,13 @@ $border-grey: #979797;
 
 @import "{wolves:bourbon}/bourbon";
 @import "login-signup";
+@import "img-radio";
+@import "swiper";
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 
 body{
 	@media only screen and (min-width: 0px){
+		overflow-x: hidden;
 		margin: 0;
 	  	font-family:'Roboto', arial, sans-serif;
 	  	font-size: rem(18);
@@ -64,7 +67,7 @@ body{
 					font-size: rem(18);
 					}
 					@media only screen and (min-width: 601px){
-						font-size: rem(18);
+						font-size: rem(24);
 					}
 				}
 
@@ -168,8 +171,7 @@ body{
 		section.custom_slide {
 			@media only screen and (min-width: 0px){
 				background-color: #fff;
-				min-height: 400px;
-				max-height: 500px;
+				height: 350px;
 				border-radius: 5px;
 				border: 3px $dark-purple solid;
 				margin-top: rem(300);
@@ -197,6 +199,32 @@ body{
 			}
 			.indicator {
 				background-color: $city-green;
+			}
+		}
+		section.avatar_btns {
+			margin-top: rem(10);
+			a.cancel{
+				background-color: $mid-purple;
+					box-shadow: 0px 5px 0px 0px #FF00FF;
+
+					&:hover {
+				 		background: tint($mid-purple, 25%);
+					}
+
+					&:active {
+						background: shade($mid-purple, 25%);
+					}
+			}
+			#saveAvatar{
+				background: $light-purple;
+				box-shadow: 0px 5px 0px 0px #4E1D6D;
+
+				&:hover {
+				 		background: tint($light-purple, 25%);
+					}
+				&:active {
+				 		background: shade($light-purple, 25%);
+					}
 			}
 		}
 	
@@ -246,7 +274,7 @@ body{
 		
 	}	
 
-	section.avatar {
+	section.avatar_container {
 		@media only screen and (min-width: 0px){
 			z-index: -1;
 			top: rem(150);
@@ -282,7 +310,8 @@ body{
 			z-index: -1;
 			top: rem(0);
 			position: relative;
-			left: 80px;
+			padding: 50px 50px 50px 0px;
+			display: none;
 
 			img{
 				position: absolute;
@@ -292,6 +321,7 @@ body{
 		@media only screen and (min-width: 601px){
 			top: rem(0);
 			left: rem(-85);
+			display: table-row;
 			img{
 				position: absolute;
 				height: rem(500);
@@ -307,6 +337,38 @@ body{
 			top: rem(0);
 			left: rem(0);
 		}
+
+		
+	}
+	section.avatar_customise_mobile {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			padding: 50px 0;
+			display: block;
+
+			img{
+				position: absolute;
+				height: rem(300);
+				width: 100%;
+				left: -20px;
+			}
+		}
+		@media only screen and (min-width: 601px){
+			display: none;
+			img{
+				position: absolute;
+				height: rem(500);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+
+
+		}
+		@media only screen and (min-width: 1200px){
+
+		}
+
 		
 	}
 	section.hexabunnies {
