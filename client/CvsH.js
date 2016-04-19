@@ -92,8 +92,8 @@ Avatar = new Mongo.Collection("avatar");
       // Optional parameters
       direction: 'horizontal',
       loop: true,
-      slidesPerView: 3,
-      
+      slidesPerView: 4,
+      slidesPerColumn: 2,
       // If we need pagination
       pagination: '.swiper-pagination',
       
@@ -111,7 +111,7 @@ Avatar = new Mongo.Collection("avatar");
                 spaceBetween: 10
             },
             600: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 10
             },
             320: {
