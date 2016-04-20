@@ -49,7 +49,7 @@ Avatar = new Mongo.Collection("avatar");
       slidesPerView: 3,
       
       // If we need pagination
-      pagination: '.swiper-pagination',
+      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
@@ -95,7 +95,7 @@ Avatar = new Mongo.Collection("avatar");
       slidesPerView: 4,
       slidesPerColumn: 2,
       // If we need pagination
-      pagination: '.swiper-pagination',
+      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
@@ -142,7 +142,7 @@ Avatar = new Mongo.Collection("avatar");
       slidesPerView: 3,
       
       // If we need pagination
-      pagination: '.swiper-pagination',
+      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
