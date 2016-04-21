@@ -1,0 +1,94 @@
+<!-- level select -->
+
+<template name="levelSelect">
+	{{> header}}
+	<main>
+	{{> user_avatar}}
+	<section class="container levels">
+		<div class="row">
+			<section class="col l6 offset-l2 m6 offset-m3 s10 offset-s1">
+				<h4>Levels</h4>
+			</section>	
+			<section class="col l8 offset-l2 m8 offset-m3 level">
+				<div id="levelSelection" class="swiper-container">
+        			<div class="swiper-wrapper">
+        				<!-- level 1 -->
+        				<div class="swiper-slide">
+        					<section class=" col s12">
+        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">1</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        						</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">done</i>Completed</span>
+        						</div></a>
+        					</section>
+			            </div>
+			            <!-- level 2 -->
+			            <div class="swiper-slide">
+        					<section class=" col s12">
+        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">2</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        						</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">done</i>Completed</span>
+        						</div></a>
+        					</section>
+			            </div>
+			            <!-- level 3 -->
+			            <div class="swiper-slide">
+			                <section class=" col s12">
+        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">3</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        						</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">done</i>Completed</span>
+        						</div></a>
+        					</section>
+			            </div>
+			            <!-- level 4 -->
+			            <div class="swiper-slide">
+			                <section class=" col s12">
+        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">4</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        						</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">done</i>Completed</span>
+        						</div></a>
+        					</section>
+			            </div>
+			            <!-- level 5 -->
+			            <div class="swiper-slide">
+			                <section class=" col s12">
+        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">5</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        						</div>
+        						<div class="levelStats">
+        							<span><i class="material-icons left">done</i>Completed</span>
+        						</div></a>
+        					</section>
+			            </div>
+        			</div>
+        			<!-- If we need pagination -->
+			        <div class="swiper-pagination"></div>
+			        
+			        <!-- If we need navigation buttons -->
+			        <div class="swiper-button-prev"></div>
+	        		<div class="swiper-button-next"></div>
+        		</div>
+			</section>
+			<section class="col l6 offset-l2 m6 offset-m3 s10 offset-s1 levelBigger">
+				<p> Please Rotate your screen. If you are on a Phone, This game can only played on Tablet or Computer</p>
+				<a href="{{pathFor route='account'}}" class="col s12 levelBigger btn waves-effect waves-light goBack">Go Back to account</a>
+			</section>
+		</div>
+
+	</section>
+	{{> hexabunnies}}
+	</main>
+	<script type="text/javascript" src="/js/level_1.js"></script>
+</template>

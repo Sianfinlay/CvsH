@@ -1,16 +1,27 @@
-<template name="levels">
+<template name="level1">
 	{{> header}}
 	<main>
 	{{> user_avatar}}
 	<section class="container">
 		<div class="row">
-			<h4 class="col l6 offset-l2">Levels</h4>
-			<section class="col l6 offset-l2">
+			<section class="col l6 offset-l3 m6 offset-m3 level">
+				<div class="hint_Submit left">
+					<a href="#level1Hint" class="Hint waves-effect modal-trigger btn-flat col">See Hint</a>
+					<a href="#level1Submit" class="SubmitLevel waves-effect modal-trigger btn">Submit!</a>
+				</div>
+				
+			</section>
+			<section class="col l6 offset-l3 m6 offset-m3 level">
 				<div id="level1"></div>
 			</section>
+			<section class="col l6 offset-l3 m6 offset-m3 s10 offset-s1 levelBigger">
+				<p> Please Rotate your screen. If you are on a Phone, This game can only played on Tablet or Computer</p>
+				<a href="{{pathFor route='account'}}" class="goBack waves-effect modal-trigger btn col l5 m5 s12">Go Back to account</a>
+			</section>
 		</div>
+		{{> level1Modal}}
 	</section>
-	
+	{{> hexabunnies}}
 	</main>
-	<script type="text/javascript" src="/js/animals.js"></script>
+	<script type="text/javascript" src="/js/level_1.js"></script>
 </template>

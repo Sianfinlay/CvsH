@@ -39,28 +39,6 @@ Avatar = new Mongo.Collection("avatar");
 			//}
 		}
 	});
-	if (Meteor.isServer) {
-		Accounts.onCreateUser(function(options, user) {
-		  Avatar.insert({
-				skin: 'skin_1',
-				hair: 'hair_1_brown',
-				outfit: 'dress_1',
-				owner: user._id
-			});
-		  if (options.profile)
-		    user.profile = options.profile;
-			console.log(user)
-		  return user;
-
-		});		
-		// this code only runs on the server
-		// only publish avatar that belongs to current user
-		Meteor.publish("avatar", function () {
-			return Avatar.find({
-				owner: this.userId
-			});
-		});
-	}
 
 
 

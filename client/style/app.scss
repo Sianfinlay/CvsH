@@ -17,6 +17,7 @@ $border-grey: #979797;
 @import "login-signup";
 @import "img-radio";
 @import "swiper";
+@import "levels";
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 
 body{
@@ -228,6 +229,13 @@ body{
 			}
 		}
 	
+	}
+	// header for pages
+	h4 {
+		font-size: rem(48);
+		font-family: 'Dosis', sans-serif;
+		font-weight: 600;
+		color: $dark-purple;
 	}
 
 	footer {

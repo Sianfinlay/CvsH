@@ -1,8 +1,10 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
-
+score = 0;
+// put score in results modal
+$('.score').html(score);
     function loadImages(sources, callback) {
-        var assetDir = 'assets/levels/1/';
+        var assetDir = '/assets/levels/1/';
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -38,40 +40,40 @@ var height = window.innerHeight;
         context.setAttr('font', '20pt Calibri');
         context.setAttr('textAlign', 'center');
         context.setAttr('fillStyle', 'black');
-        context.fillText(text, background.getStage().getWidth() / 2, 40);
+        context.fillText(text, background.getStage().getWidth() / 2, 300);
     }
 
     function initStage(images) {
         var stage = new Konva.Stage({
             container: 'level1',
-            width: 578,
-            height: 530
+            width: 410,
+            height: 430
         });
         var background = new Konva.Layer();
         var codeLayer = new Konva.Layer();
         var codeShapes = [];
-        var score = 0;
+        score = 0;
 
         // image positions
         var codes = {
             pstart: {
                 x: 10,
-                y: 70
+                y: 350
             },
             pend: {
-                x: 90,
-                y: 70
+                x: 160,
+                y: 350
             }
         };
 
         var outlines = {
             pstart_black: {
-                x: 275,
-                y: 350
+                x: 30,
+                y: 49
             },
             pend_black: {
-                x: 390,
-                y: 250
+                x: 230,
+                y: 100
             }
         };
 
@@ -100,7 +102,6 @@ var height = window.innerHeight;
                         
                         console.log("privKey:"+ privKey);
                         console.log("Key:"+ key);
-                        code.inRightPlace == true;
                         console.log(code.id());
                         codeLayer.draw();
                         var testKey = privKey+ "_black";
@@ -128,56 +129,18 @@ var height = window.innerHeight;
                     snapTo(code, "pstart");
                     snapTo(code, "pend");
 
-                    /*// lion
-                    if(isNearOutline(code, outlines['lion_black'])) {
-                        code.position({
-                            x : outlines['lion_black'].x,
-                            y : outlines['lion_black'].y
-                        });
-                        
-                        console.log("privKey:"+ privKey);
-                        console.log("Key:"+ key);
-                        animal.inRightPlace == true;
-                        console.log(animal.id());
-                        animalLayer.draw();
-                        var testKey = privKey+ "_black";
-                        
-
-                        if(animal.id() == "lion") {
-                            setTimeout(function() {
-                                animal.draggable(false);
-                            }, 50);
-                        }
-                    }
-                    // giraffe
-                    if(isNearOutline(animal, outlines['giraffe_black'])) {
-                        animal.position({
-                            x : outlines['giraffe_black'].x,
-                            y : outlines['giraffe_black'].y
-                        });
-                        
-                        console.log("privKey:"+ privKey);
-                        console.log("Key:"+ key);
-                        console.log(animal.id());
-                        animalLayer.draw();
-                        var testKey = privKey+ "_black";
-                        
-                        if(animal.id() == "giraffe") {
-                            setTimeout(function() {
-                                animal.draggable(false);
-                            }, 50);
-                        }
-                        
-                    }*/
+                    
 
                     // if in right place give 1 point 
                     if(isNearOutline(code, outlines[privKey + '_black'])) {
                         if(privKey == code.id()){
                             score += 1;
-
+                            $('.score').html(score);
                             //change to match score
                             if(score >= 2) {
-                                var text = 'You win! Enjoy your booty!';
+                                var text = '';
+                                // put new score in modal
+                                $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
                             console.log(score);
@@ -185,7 +148,7 @@ var height = window.innerHeight;
                     }
 
                     // not in right place give take away 
-                    if(!isNearOutline(animal, outlines[privKey + '_black'])) {                     
+                    if(!isNearOutline(code, outlines[privKey + '_black'])) {                     
                         codeLayer.draw();
                         if(score == 0){
                             console.log("no score")
@@ -238,16 +201,16 @@ var height = window.innerHeight;
 
         stage.add(background);
         stage.add(codeLayer);
-        drawBackground(background, images.background, 'Ahoy! Put the animals on the beach!');
+        drawBackground(background, images.background, " ");
     }
 
     var sources = {
         background: 'background.png',
         pstart: 'p-start.png',
-        //snake_glow: 'snake-glow.png',
+        pstart_glow: 'p-start_glow.png',
         pstart_black: 'p-start_outline.png',
         pend: 'p-end.png',
-        //lion_glow: 'lion-glow.png',
+        pend_glow: 'p-end_glow.png',
         pend_black: 'p-end_outline.png'
     };
 
