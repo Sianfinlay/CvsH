@@ -10,7 +10,7 @@ Router.route('/', {
     onBeforeAction: function(){
     	var currrentUser = Meteor.userId();
     	if(currrentUser){
-    		this.redirect('/account');
+    		this.render('account');
     	} else {
     		this.next();
     	}
