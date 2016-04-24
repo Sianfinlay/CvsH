@@ -5,6 +5,10 @@ Levels = new Mongo.Collection("levels");
   Template.Signup.onRendered( function(){
     $('.modal-trigger').leanModal();
   });
+
+  /*===================
+    level functions 
+    ==================*/
   Template.level1Modal.onRendered( function(){
     $('#level1Hint').openModal();
     $('.modal-trigger').leanModal();
@@ -14,6 +18,45 @@ Levels = new Mongo.Collection("levels");
       return score;
     }
   });
+  Template.level2Modal.onRendered( function(){
+    $('#level2Hint').openModal();
+    $('.modal-trigger').leanModal();
+  });
+  Template.level2Modal.helpers({
+    score: function () {
+      return score;
+    }
+  });
+  Template.level3Modal.onRendered( function(){
+    $('#level3Hint').openModal();
+    $('.modal-trigger').leanModal();
+  });
+  Template.level3Modal.helpers({
+    score: function () {
+      return score;
+    }
+  });
+  Template.level4Modal.onRendered( function(){
+    $('#level4Hint').openModal();
+    $('.modal-trigger').leanModal();
+  });
+  Template.level4Modal.helpers({
+    score: function () {
+      return score;
+    }
+  });
+  Template.level5Modal.onRendered( function(){
+    $('#level5Hint').openModal();
+    $('.modal-trigger').leanModal();
+  });
+  Template.level5Modal.helpers({
+    score: function () {
+      return score;
+    }
+  });
+
+
+
   Template.dropdown_nav.onRendered( function(){
     $('.dropdown-button').dropdown({
       belowOrigin: true

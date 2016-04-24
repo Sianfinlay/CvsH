@@ -55,6 +55,58 @@ Router.route('/levels/1', {
         }
     }
 });
+Router.route('/levels/2', {
+    name: 'level2',
+    template: 'level2',
+    title: 'Levels | 2',
+    onBeforeAction: function(){
+        var currrentUser = Meteor.userId();
+        if(currrentUser){
+            this.next();
+        } else {
+            this.redirect('/');
+        }
+    }
+});
+Router.route('/levels/3', {
+    name: 'level3',
+    template: 'level3',
+    title: 'Levels | 3',
+    onBeforeAction: function(){
+        var currrentUser = Meteor.userId();
+        if(currrentUser){
+            this.next();
+        } else {
+            this.redirect('/');
+        }
+    }
+});
+Router.route('/levels/4', {
+    name: 'level4',
+    template: 'level4',
+    title: 'Levels | 4',
+    onBeforeAction: function(){
+        var currrentUser = Meteor.userId();
+        if(currrentUser){
+            this.next();
+        } else {
+            this.redirect('/');
+        }
+    }
+});
+Router.route('/levels/5', {
+    name: 'level5',
+    template: 'level5',
+    title: 'Levels | 5',
+    onBeforeAction: function(){
+        var currrentUser = Meteor.userId();
+        if(currrentUser){
+            this.next();
+        } else {
+            this.redirect('/');
+        }
+    }
+});
 
 Router.route('/customisation', {
 	name: 'customisation',

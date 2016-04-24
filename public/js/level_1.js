@@ -1,6 +1,7 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
+$('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
 // put score in results modal
 $('.score').html(score);
     function loadImages(sources, callback) {
@@ -135,11 +136,13 @@ $('.score').html(score);
                     if(isNearOutline(code, outlines[privKey + '_black'])) {
                         if(privKey == code.id()){
                             score += 1;
+
                             $('.score').html(score);
                             //change to match score
                             if(score >= 2) {
                                 var text = '';
                                 // put new score in modal
+                                $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
                                 $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
