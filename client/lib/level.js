@@ -6,7 +6,7 @@ Template.levelSelect.helpers({
 	      stars += doc.score;
 	    });
 	    Meteor.call("updateStars", stars);
-      	return Levels.find();
+      	return Levels.find({owner: Meteor.userId()});
     }
   });
 Template.account.helpers({
