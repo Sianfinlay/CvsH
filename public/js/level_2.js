@@ -1,11 +1,13 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-$('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
+// change to display lose messsage for the level
+$('.scoreMessage').html("Your Attacks weren't powerful enough. REMEMBER: Bold words are <code>&lt;strong&gt;</code> and slanted words are <code>&lt;em&gt;</code>");
 // put score in results modal
 $('.score').html(score);
     function loadImages(sources, callback) {
-        var assetDir = '/assets/levels/1/';
+        // change to match which level it is
+        var assetDir = '/assets/levels/2/';
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -46,7 +48,7 @@ $('.score').html(score);
 
     function initStage(images) {
         var stage = new Konva.Stage({
-            container: 'level1',
+            container: 'level2',
             width: 410,
             height: 430
         });
@@ -57,24 +59,40 @@ $('.score').html(score);
 
         // image positions
         var codes = {
-            pstart: {
+            strongstart: {
                 x: 10,
                 y: 350
             },
-            pend: {
+            strongend: {
                 x: 160,
                 y: 350
+            },
+            emstart: {
+                x: 10,
+                y: 400
+            },
+            emend: {
+                x: 160,
+                y: 400
             }
         };
 
         var outlines = {
-            pstart_black: {
-                x: 30,
-                y: 49
+            strongstart_black: {
+                x: 166,
+                y: 95
             },
-            pend_black: {
-                x: 230,
-                y: 100
+            strongend_black: {
+                x: 219,
+                y: 145
+            },
+            emstart_black: {
+                x: 28,
+                y: 195
+            },
+            emend_black: {
+                x: 145,
+                y: 245
             }
         };
 
@@ -127,8 +145,10 @@ $('.score').html(score);
                        * snap into place if it is
                        */
                 code.on('dragend', function() {
-                    snapTo(code, "pstart");
-                    snapTo(code, "pend");
+                    snapTo(code, "strongstart");
+                    snapTo(code, "strongend");
+                    snapTo(code, "emstart");
+                    snapTo(code, "emend");
 
                     
 
@@ -139,10 +159,10 @@ $('.score').html(score);
 
                             $('.score').html(score);
                             //change to match score
-                            if(score >= 2) {
+                            if(score >= 4) {
                                 var text = '';
                                 // put new score in modal
-                                $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
+                                $('.scoreMessage').html("<strong><em>Congrats, you are a real threat to those mean HexaBunnies now!</em></strong>");
                                 $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
@@ -209,12 +229,18 @@ $('.score').html(score);
 
     var sources = {
         background: 'background.png',
-        pstart: 'p-start.png',
-        pstart_glow: 'p-start_glow.png',
-        pstart_black: 'p-start_outline.png',
-        pend: 'p-end.png',
-        pend_glow: 'p-end_glow.png',
-        pend_black: 'p-end_outline.png'
+        strongstart: 'strong-start.png',
+        strongstart_glow: 'strong-start_glow.png',
+        strongstart_black: 'strong-start_outline.png',
+        strongend: 'strong-end.png',
+        strongend_glow: 'strong-end_glow.png',
+        strongend_black: 'strong-end_outline.png',
+        emstart: 'em-start.png',
+        emstart_glow: 'em-start_glow.png',
+        emstart_black: 'em-start_outline.png',
+        emend: 'em-end.png',
+        emend_glow: 'em-end_glow.png',
+        emend_black: 'em-end_outline.png'
     };
 
     loadImages(sources, initStage);

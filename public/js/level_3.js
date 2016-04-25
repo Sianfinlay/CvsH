@@ -1,11 +1,13 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-$('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
+// change to display lose messsage for the level
+$('.scoreMessage').html("There's just too many HexaBunnies! REMEMBER: 1,2,3 is an ordered list, without is just an unordered list.");
 // put score in results modal
 $('.score').html(score);
     function loadImages(sources, callback) {
-        var assetDir = '/assets/levels/1/';
+        // change to match which level it is
+        var assetDir = '/assets/levels/3/';
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -28,7 +30,7 @@ $('.score').html(score);
         var ax = a.getX();
         var ay = a.getY();
 
-        if(ax > o.x - 50 && ax < o.x + 50 && ay > o.y - 50 && ay < o.y + 50) {
+        if(ax > o.x - 20 && ax < o.x + 20 && ay > o.y - 20 && ay < o.y + 20) {
             return true;
         }
         else {
@@ -46,9 +48,9 @@ $('.score').html(score);
 
     function initStage(images) {
         var stage = new Konva.Stage({
-            container: 'level1',
-            width: 410,
-            height: 430
+            container: 'level3',
+            width: 422,
+            height: 530
         });
         var background = new Konva.Layer();
         var codeLayer = new Konva.Layer();
@@ -57,24 +59,56 @@ $('.score').html(score);
 
         // image positions
         var codes = {
-            pstart: {
-                x: 10,
-                y: 350
+            gingerOL: {
+                x: 0,
+                y: 400
             },
-            pend: {
-                x: 160,
-                y: 350
+            mintOL: {
+                x: 140,
+                y: 400
+            },
+            twilightOL: {
+                x: 0,
+                y: 450
+            },
+            gingerUL: {
+                x: 140,
+                y: 450
+            },
+            mintUL: {
+                x: 280,
+                y: 400
+            },
+            twilightUL: {
+                x: 280,
+                y: 450
             }
         };
 
         var outlines = {
-            pstart_black: {
-                x: 30,
-                y: 49
+            gingerOL_black: {
+                x: 105,
+                y: 65
             },
-            pend_black: {
-                x: 230,
-                y: 100
+            mintOL_black: {
+                x: 105,
+                y: 99
+            },
+            twilightOL_black: {
+                x: 105,
+                y: 133
+            },
+            gingerUL_black: {
+                x: 105,
+                y: 245
+            },
+            mintUL_black: {
+                x: 105,
+                y: 280
+            },
+            twilightUL_black: {
+                x: 105,
+                y: 314
             }
         };
 
@@ -127,8 +161,12 @@ $('.score').html(score);
                        * snap into place if it is
                        */
                 code.on('dragend', function() {
-                    snapTo(code, "pstart");
-                    snapTo(code, "pend");
+                    snapTo(code, "gingerOL");
+                    snapTo(code, "mintOL");
+                    snapTo(code, "twilightOL");
+                    snapTo(code, "gingerUL");
+                    snapTo(code, "mintUL");
+                    snapTo(code, "twilightUL");
 
                     
 
@@ -139,10 +177,10 @@ $('.score').html(score);
 
                             $('.score').html(score);
                             //change to match score
-                            if(score >= 2) {
+                            if(score >= 6) {
                                 var text = '';
                                 // put new score in modal
-                                $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
+                                $('.scoreMessage').html("1 HexaBunny, 2 HexaBunnies, 3 HexaBunnies... you can take 'em all on!");
                                 $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
@@ -209,12 +247,24 @@ $('.score').html(score);
 
     var sources = {
         background: 'background.png',
-        pstart: 'p-start.png',
-        pstart_glow: 'p-start_glow.png',
-        pstart_black: 'p-start_outline.png',
-        pend: 'p-end.png',
-        pend_glow: 'p-end_glow.png',
-        pend_black: 'p-end_outline.png'
+        gingerOL: 'ginger-ol.png',
+        gingerOL_glow: 'ginger-ol_glow.png',
+        gingerOL_black: 'ginger-ol_outline.png',
+        mintOL: 'mint-ol.png',
+        mintOL_glow: 'mint-ol_glow.png',
+        mintOL_black: 'mint-ol_outline.png',
+        twilightOL: 'twilight-ol.png',
+        twilightOL_glow: 'twilight-ol_glow.png',
+        twilightOL_black: 'twilight-ol_outline.png',
+        gingerUL: 'ginger-ul.png',
+        gingerUL_glow: 'ginger-ul_glow.png',
+        gingerUL_black: 'ginger-ul_outline.png',
+        mintUL: 'mint-ul.png',
+        mintUL_glow: 'mint-ul_glow.png',
+        mintUL_black: 'mint-ul_outline.png',
+        twilightUL: 'twilight-ul.png',
+        twilightUL_glow: 'twilight-ul_glow.png',
+        twilightUL_black: 'twilight-ul_outline.png'
     };
 
     loadImages(sources, initStage);

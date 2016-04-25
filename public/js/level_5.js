@@ -1,11 +1,11 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-$('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
+$('.scoreMessage').html("You failed to summon the puppy army D: REMEMBER: <code>src</code> we need to get the image, and <code>alt</code> we describe the image.");
 // put score in results modal
 $('.score').html(score);
     function loadImages(sources, callback) {
-        var assetDir = '/assets/levels/1/';
+        var assetDir = '/assets/levels/5/';
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -28,7 +28,7 @@ $('.score').html(score);
         var ax = a.getX();
         var ay = a.getY();
 
-        if(ax > o.x - 50 && ax < o.x + 50 && ay > o.y - 50 && ay < o.y + 50) {
+        if(ax > o.x - 20 && ax < o.x + 20 && ay > o.y - 20 && ay < o.y + 20) {
             return true;
         }
         else {
@@ -46,7 +46,7 @@ $('.score').html(score);
 
     function initStage(images) {
         var stage = new Konva.Stage({
-            container: 'level1',
+            container: 'level5',
             width: 410,
             height: 430
         });
@@ -57,24 +57,24 @@ $('.score').html(score);
 
         // image positions
         var codes = {
-            pstart: {
+            src: {
                 x: 10,
                 y: 350
             },
-            pend: {
-                x: 160,
+            alt: {
+                x: 220,
                 y: 350
             }
         };
 
         var outlines = {
-            pstart_black: {
-                x: 30,
-                y: 49
+            src_black: {
+                x: 145,
+                y: 65
             },
-            pend_black: {
-                x: 230,
-                y: 100
+            alt_black: {
+                x: 118,
+                y: 106
             }
         };
 
@@ -127,8 +127,8 @@ $('.score').html(score);
                        * snap into place if it is
                        */
                 code.on('dragend', function() {
-                    snapTo(code, "pstart");
-                    snapTo(code, "pend");
+                    snapTo(code, "src");
+                    snapTo(code, "alt");
 
                     
 
@@ -142,7 +142,7 @@ $('.score').html(score);
                             if(score >= 2) {
                                 var text = '';
                                 // put new score in modal
-                                $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
+                                $('.scoreMessage').html("Haha, that's right HexaBunnies! Fear the power of our puppy army <section class='section'><img class='responsive-img' src='/images/puppy_army.jpg' alt='cute puppy army'/></section>");
                                 $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
@@ -209,12 +209,12 @@ $('.score').html(score);
 
     var sources = {
         background: 'background.png',
-        pstart: 'p-start.png',
-        pstart_glow: 'p-start_glow.png',
-        pstart_black: 'p-start_outline.png',
-        pend: 'p-end.png',
-        pend_glow: 'p-end_glow.png',
-        pend_black: 'p-end_outline.png'
+        src: 'src.png',
+        src_glow: 'src_glow.png',
+        src_black: 'src_outline.png',
+        alt: 'alt.png',
+        alt_glow: 'alt_glow.png',
+        alt_black: 'alt_outline.png'
     };
 
     loadImages(sources, initStage);

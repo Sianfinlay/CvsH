@@ -1,11 +1,13 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-$('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
+// change to display lose messsage for the level
+$('.scoreMessage').html("You have to see the point of this fight! REMEMBER: <code>&lt;h1&gt;</code> biggest and <code>&lt;h6&gt;</code> smallest");
 // put score in results modal
 $('.score').html(score);
     function loadImages(sources, callback) {
-        var assetDir = '/assets/levels/1/';
+        // change to match which level it is
+        var assetDir = '/assets/levels/4/';
         var images = {};
         var loadedImages = 0;
         var numImages = 0;
@@ -28,7 +30,7 @@ $('.score').html(score);
         var ax = a.getX();
         var ay = a.getY();
 
-        if(ax > o.x - 50 && ax < o.x + 50 && ay > o.y - 50 && ay < o.y + 50) {
+        if(ax > o.x - 20 && ax < o.x + 20 && ay > o.y - 20 && ay < o.y + 20) {
             return true;
         }
         else {
@@ -46,9 +48,9 @@ $('.score').html(score);
 
     function initStage(images) {
         var stage = new Konva.Stage({
-            container: 'level1',
-            width: 410,
-            height: 430
+            container: 'level4',
+            width: 422,
+            height: 450
         });
         var background = new Konva.Layer();
         var codeLayer = new Konva.Layer();
@@ -57,24 +59,56 @@ $('.score').html(score);
 
         // image positions
         var codes = {
-            pstart: {
-                x: 10,
+            h1: {
+                x: 0,
                 y: 350
             },
-            pend: {
-                x: 160,
+            h2: {
+                x: 140,
                 y: 350
+            },
+            h3: {
+                x: 280,
+                y: 350
+            },
+            h4: {
+                x: 0,
+                y: 400
+            },
+            h5: {
+                x: 140,
+                y: 400
+            },
+            h6: {
+                x: 280,
+                y: 400
             }
         };
 
         var outlines = {
-            pstart_black: {
-                x: 30,
-                y: 49
+            h1_black: {
+                x: 105,
+                y: 65
             },
-            pend_black: {
-                x: 230,
-                y: 100
+            h2_black: {
+                x: 105,
+                y: 105
+            },
+            h3_black: {
+                x: 105,
+                y: 145
+            },
+            h4_black: {
+                x: 105,
+                y: 185
+            },
+            h5_black: {
+                x: 105,
+                y: 225
+            },
+            h6_black: {
+                x: 105,
+                y: 265
             }
         };
 
@@ -127,8 +161,12 @@ $('.score').html(score);
                        * snap into place if it is
                        */
                 code.on('dragend', function() {
-                    snapTo(code, "pstart");
-                    snapTo(code, "pend");
+                    snapTo(code, "h1");
+                    snapTo(code, "h2");
+                    snapTo(code, "h3");
+                    snapTo(code, "h4");
+                    snapTo(code, "h5");
+                    snapTo(code, "h6");
 
                     
 
@@ -139,10 +177,10 @@ $('.score').html(score);
 
                             $('.score').html(score);
                             //change to match score
-                            if(score >= 2) {
+                            if(score >= 6) {
                                 var text = '';
                                 // put new score in modal
-                                $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
+                                $('.scoreMessage').html("Okay, New we got are point across let's knock 'em down!");
                                 $('.score').html(score);
                                 drawBackground(background, images.background, text);
                             }
@@ -209,12 +247,24 @@ $('.score').html(score);
 
     var sources = {
         background: 'background.png',
-        pstart: 'p-start.png',
-        pstart_glow: 'p-start_glow.png',
-        pstart_black: 'p-start_outline.png',
-        pend: 'p-end.png',
-        pend_glow: 'p-end_glow.png',
-        pend_black: 'p-end_outline.png'
+        h1: 'h1.png',
+        h1_glow: 'h1_glow.png',
+        h1_black: 'h1_outline.png',
+        h2: 'h2.png',
+        h2_glow: 'h2_glow.png',
+        h2_black: 'h2_outline.png',
+        h3: 'h3.png',
+        h3_glow: 'h3_glow.png',
+        h3_black: 'h3_outline.png',
+        h4: 'h4.png',
+        h4_glow: 'h4_glow.png',
+        h4_black: 'h4_outline.png',
+        h5: 'h5.png',
+        h5_glow: 'h5_glow.png',
+        h5_black: 'h5_outline.png',
+        h6: 'h6.png',
+        h6_glow: 'h6_glow.png',
+        h6_black: 'h6_outline.png'
     };
 
     loadImages(sources, initStage);
