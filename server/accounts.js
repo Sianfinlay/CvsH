@@ -1,4 +1,4 @@
-// first, remove configuration entry in case service is already configured
+// facebook login
 ServiceConfiguration.configurations.remove({service: "facebook"});
 ServiceConfiguration.configurations.remove({service: "twitter"});
 
@@ -9,7 +9,7 @@ ServiceConfiguration.configurations.insert({
   secret: "1983cb0435f0d43977ed8092a89b698d"
 });
 
-// first, remove configuration entry in case service is already configured
+// twitter doesn't work
 /*Accounts.loginServiceConfiguration.remove({
   service: "twitter"
 });

@@ -180,6 +180,12 @@ body{
 			font-family: 'Dosis', arial, sans-serif;
 			color: $dark-purple;
 			font-size: rem(20);
+			@media only screen and (min-width: 0px){
+				margin-top: rem(300);
+			}
+			@media only screen and (min-width: 601px){
+				margin-top: 0;
+			}
 		}
 		section.custom_slide {
 			@media only screen and (min-width: 0px){
@@ -187,7 +193,6 @@ body{
 				height: 350px;
 				border-radius: 5px;
 				border: 3px $dark-purple solid;
-				margin-top: rem(300);
 			}
 			@media only screen and (min-width: 601px){
 				margin-top: 0;

@@ -2,8 +2,6 @@ Levels = new Mongo.Collection("levels");
 Leaderboard = new Mongo.Collection("leaderboard");
 	Meteor.methods({
 		addLevel: function (levelNo, maxScore) {
-			
-
 			// example of level insert
 			Levels.insert({
 				level: levelNo,

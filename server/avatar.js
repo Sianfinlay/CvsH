@@ -1,10 +1,6 @@
 Avatar = new Mongo.Collection("avatar");
 	Meteor.methods({
 		addAvatar: function (userId) {
-			//Make sure the user is sign up before creating an avatar
-			
-
-			//var username = Meteor.user().username || Meteor.user().profile.name
 			Avatar.insert({
 				skin: 'skin_1',
 				hair: 'hair_1_brown',
@@ -17,7 +13,6 @@ Avatar = new Mongo.Collection("avatar");
 				owner: this.userId
 			});
 			
-			var username = Meteor.user().username || Meteor.user().profile.name
 			Avatar.update({
 				owner: this.userId
 			}, { 
@@ -27,16 +22,6 @@ Avatar = new Mongo.Collection("avatar");
 					outfit: newOutfit
 				}
 			});
-		},
-		deleteAvatar: function (avatarId) {
-			var avatar = Avatar.findOne(avatarId);
-			if (avatar.owner !== Meteor.userId()) {
-				throw new Meteor.Error("not-authorized");
-			}
-
-			//Avatar.remove(avatarId) {
-
-			//}
 		}
 	});
 

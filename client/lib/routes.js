@@ -2,7 +2,7 @@
 Router.configure({
     layoutTemplate: 'app_layout'
 });
- 
+// get home page 
 Router.route('/', {
 	name: 'home',
  	template: 'Home',
@@ -16,6 +16,7 @@ Router.route('/', {
     	}
     }
 });
+// get account page
 Router.route('/account', {
 	name: 'account',
  	template: 'account',
@@ -29,6 +30,7 @@ Router.route('/account', {
     	}
     }
 });
+// get leaderboard page
 Router.route('/leaderboard', {
     name: 'leaderboard',
     template: 'leaderboard',
@@ -42,6 +44,7 @@ Router.route('/leaderboard', {
         }
     }
 });
+// get levels page
 Router.route('/levels', {
     name: 'levels',
     template: 'levelSelect',
@@ -55,6 +58,7 @@ Router.route('/levels', {
         }
     }
 });
+// level 1
 Router.route('/levels/1', {
     name: 'level1',
     template: 'level1',
@@ -68,6 +72,7 @@ Router.route('/levels/1', {
         }
     }
 });
+// level 2
 Router.route('/levels/2', {
     name: 'level2',
     template: 'level2',
@@ -81,6 +86,7 @@ Router.route('/levels/2', {
         }
     }
 });
+// level 3
 Router.route('/levels/3', {
     name: 'level3',
     template: 'level3',
@@ -94,6 +100,7 @@ Router.route('/levels/3', {
         }
     }
 });
+// level 4
 Router.route('/levels/4', {
     name: 'level4',
     template: 'level4',
@@ -107,6 +114,7 @@ Router.route('/levels/4', {
         }
     }
 });
+// level 5
 Router.route('/levels/5', {
     name: 'level5',
     template: 'level5',
@@ -120,7 +128,7 @@ Router.route('/levels/5', {
         }
     }
 });
-
+// get customisation page
 Router.route('/customisation', {
 	name: 'customisation',
  	template: 'customisation',
@@ -134,7 +142,7 @@ Router.route('/customisation', {
     	}
     }
 });
-
+//create title 
 Router.after(function(){
     if (this.route.options.title)
         document.title = 'CvsH | '+ this.route.options.title ;

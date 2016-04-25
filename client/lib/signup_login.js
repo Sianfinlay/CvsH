@@ -1,6 +1,11 @@
  //signup and login events
-
-//temporary
+/*===================
+    signup intialiations 
+    ==================*/
+ Template.Signup.onRendered( function(){
+    $('.modal-trigger').leanModal();
+ });
+//log out when clicked
  Template.dropdown_nav.events({
  	'click .logout': function(event){
  		event.preventDefault();
@@ -12,6 +17,7 @@
  	}
  });
 
+// create user
  Template.Signup.events({
     'submit .signup': function (event) {
         event.preventDefault();
@@ -43,6 +49,7 @@
         });
     }
   });
+ // login 
  Template.Login.events({
  	'submit .login': function (event) {
  		event.preventDefault();

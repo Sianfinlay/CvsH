@@ -1,17 +1,18 @@
 // customisation
 
+// create tabs for skin, hair and outfit
 Template.custom_slider.onRendered( function(){
-    $('ul.tabs').tabs();
-    
-      
+    $('ul.tabs').tabs();    
   });
+// get avatar for customisation form
  Template.customisation.helpers({
     avatar: function () {
       return Avatar.find({
-      owner: Meteor.userId()
-    });
+        owner: Meteor.userId()
+      });
     }
   });
+ // get customised avatar to show changes
  Template.customise_avatar.helpers({
     avatar: function () {
       return Avatar.find({
@@ -19,6 +20,7 @@ Template.custom_slider.onRendered( function(){
     });
     }
   });
+ // form to save avatar
  Template.customisation.events({ 
   "click #saveAvatar": function (event) {
     event.preventDefault();
@@ -41,6 +43,7 @@ Template.custom_slider.onRendered( function(){
     Router.go('/account');
   }
  });
+ // skin swiper
  Template.skin.onRendered( function(){
   var mySwiper = new Swiper ('#Skin', {
       // Optional parameters
@@ -48,8 +51,6 @@ Template.custom_slider.onRendered( function(){
       loop: true,
       slidesPerView: 3,
       
-      // If we need pagination
-      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
@@ -87,6 +88,7 @@ Template.custom_slider.onRendered( function(){
         $('img.base').attr("src", base_src);
     }); 
  });
+ // hair swiper
  Template.hair.onRendered( function(){
   var mySwiper = new Swiper ('#Hair', {
       // Optional parameters
@@ -94,8 +96,6 @@ Template.custom_slider.onRendered( function(){
       loop: true,
       slidesPerView: 4,
       slidesPerColumn: 2,
-      // If we need pagination
-      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
@@ -120,7 +120,7 @@ Template.custom_slider.onRendered( function(){
             }
         }
     });
-    // change skin being display on avatar, this is not saved yet
+    // change hair being display on avatar, this is not saved yet
     $("img.ava_hair").click(function() {
         $('img').removeClass('img_active');
         $(this).addClass('img_active');
@@ -132,7 +132,7 @@ Template.custom_slider.onRendered( function(){
         $('img.hair').attr("src", hair_src);
     }); 
  });
-
+// outfit swiper
  Template.outfit.onRendered( function(){
   var mySwiper = new Swiper ('#Outfit', {
       // Optional parameters
@@ -140,8 +140,6 @@ Template.custom_slider.onRendered( function(){
       loop: true,
       slidesPerView: 3,
       
-      // If we need pagination
-      //pagination: '.swiper-pagination',
       
       // Navigation arrows
       nextButton: '.swiper-button-next',
@@ -167,7 +165,7 @@ Template.custom_slider.onRendered( function(){
         }
       
     });
-    // change skin being display on avatar, this is not saved yet
+    // change outfit being display on avatar, this is not saved yet
     $("img.ava_outfit").click(function() {
         $('img').removeClass('img_active');
         $(this).addClass('img_active');
