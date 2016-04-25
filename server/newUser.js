@@ -50,6 +50,11 @@ if (Meteor.isServer) {
 			owner: user._id
 		});
 
+		Leaderboard.insert({
+			owner: user._id,
+			stars: 0
+		});
+
 	  	if (options.profile)
 		    user.profile = options.profile;
 			console.log(user)
@@ -62,16 +67,5 @@ if (Meteor.isServer) {
 
 	});		
 	
-	// this code only runs on the server
-	// only publish avatar and levels that belongs to current user
-	Meteor.publish("avatar", function () {
-		return Avatar.find({
-			owner: this.userId
-		});
-	});
-	Meteor.publish("levels", function () {
-		return Levels.find({
-			owner: this.userId
-		});
-	});
+	
 }

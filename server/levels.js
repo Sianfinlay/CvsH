@@ -1,7 +1,7 @@
 Levels = new Mongo.Collection("levels");
+Leaderboard = new Mongo.Collection("leaderboard");
 	Meteor.methods({
 		addLevel: function (levelNo, maxScore) {
-			//Make sure the user is sign up before creating an avatar
 			
 
 			// example of level insert
@@ -25,6 +25,19 @@ Levels = new Mongo.Collection("levels");
 				$set: {
 					score: score,
 					completed: true
+				}
+			});
+		},
+		updateStars: function (newStars) {
+			var leaderboard = Leaderboard.findOne({
+				owner: this.userId
+			});
+
+			Leaderboard.update({
+				owner: this.userId
+			}, {
+				$set: {
+					stars: newStars
 				}
 			});
 		}

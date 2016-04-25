@@ -7,12 +7,16 @@ Template.custom_slider.onRendered( function(){
   });
  Template.customisation.helpers({
     avatar: function () {
-      return Avatar.find();
+      return Avatar.find({
+      owner: Meteor.userId()
+    });
     }
   });
  Template.customise_avatar.helpers({
     avatar: function () {
-      return Avatar.find();
+      return Avatar.find({
+      owner: Meteor.userId()
+    });
     }
   });
  Template.customisation.events({ 

@@ -18,6 +18,7 @@ $border-grey: #979797;
 @import "img-radio";
 @import "swiper";
 @import "levels";
+@import "leaderboard";
 @import "{poetic:materialize-scss}/sass/materialize.scss";
 
 body{
@@ -75,7 +76,13 @@ body{
 			}
 			.dropdown-content{
 				a{
-					color: $city-orange;
+					@media only screen and (min-width: 0px){
+						color: $city-orange;
+						font-size: rem(12);
+					}
+					@media only screen and (min-width: 601px){
+						font-size: rem(18);
+					}
 				}
 			}
 		}
@@ -433,3 +440,18 @@ code {
 	}
 	
 }
+.collection a.collection-item {
+	color: $dark-purple;
+}
+.stars{color: $dark-purple;}
+.starIcon {
+	padding-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.accIcon {
+	padding-right: 50px;
+    position: relative;
+    top: 5px;
+}
+

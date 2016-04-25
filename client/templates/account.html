@@ -6,13 +6,22 @@
 	{{> user_avatar}}
 	<section class="container">
 		<div class="row">
-			<h4 class="col offset-l2">Account</h4>
 			<section class="col l7 offset-l2 m6 offset-m5 s10 offset-s1">
-				<h4>Stars: {{starCount}}</h4>
+				<h4>Account</h4>
+			
+				<section class="section">
+					{{#each starCount}}
+					<span class="stars"><i class="material-icons starIcon">star_rate</i>: {{stars}}</span>
+					{{/each}}
+				</section>
+				<div class="collection">
+		        	<a href="{{pathFor route='levels'}}" class="collection-item"><i class="material-icons accIcon">games</i>Level Selection</a>
+			        <a href="{{pathFor route='customisation'}}" class="collection-item"><i class="material-icons accIcon">accessibility</i>Customise Your CodeGirl</a>
+			        <a href="{{pathFor route='leaderboard'}}" class="collection-item"><i class="material-icons accIcon">line_weight</i>Leaderboard</a>
+		     	</div>
 			</section>
 		</div>
 	</section>
 	</main>
-	<!--<div id="test-canvas"></div>
-	<script type="text/javascript" src="/js/animals.js"></script>-->
+
 </template>

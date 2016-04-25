@@ -13,24 +13,24 @@
 				<div id="levelSelection" class="swiper-container">
         			<div class="swiper-wrapper">
 				    {{#if currentUser}}
-                                            {{#each levels}}
-                                            <div class="swiper-slide">        
-        					<section class="col s12">
-        						<a href="/levels/{{level}}"><div class="levelNumber">{{level}}</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>{{score}}/{{maxScore}}</span>
-        						</div>
-        						<div class="levelStats">
-                                                                {{#if completed}}
-                                                                  <span><i class="material-icons left">done</i>Done</span>
-                                                                {{else}}
-                                                                  <span><i class="material-icons left">clear</i>Not done</span>
-                                                                {{/if}}
-        						</div></a>
-        					</section>
-        			            </div>
-                                            {{/each}}
-                                    {{/if}}
+                        {{#each levels}}
+                        <div class="swiper-slide">        
+    					<section class="col s12">
+    						<a href="/levels/{{level}}"><div class="levelNumber">{{level}}</div>
+    						<div class="levelStats">
+    							<span><i class="material-icons left">star_rate</i>{{score}}/{{maxScore}}</span>
+    						</div>
+    						<div class="levelStats">
+                                {{#if completed}}
+                                  <span><i class="material-icons left">done</i>Done</span>
+                                {{else}}
+                                  <span><i class="material-icons left">clear</i>Not done</span>
+                                {{/if}}
+    						</div></a>
+    					</section>
+			            </div>
+                    	{{/each}}
+            		{{/if}}
 			            
         			</div>
         			<!-- If we need pagination -->

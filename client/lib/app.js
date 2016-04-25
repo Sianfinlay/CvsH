@@ -1,6 +1,15 @@
 // client side js 
 Avatar = new Mongo.Collection("avatar");
 Levels = new Mongo.Collection("levels");
+Leaderboard = new Mongo.Collection("leaderboard",  {
+   //create join to avatar collection
+    transform: function(doc) {
+      doc.avatarObj = Avatar.find({
+        owner: doc.owner
+      });
+      return doc;
+    }
+  });
 
   Template.Signup.onRendered( function(){
     $('.modal-trigger').leanModal();
@@ -60,7 +69,9 @@ Levels = new Mongo.Collection("levels");
 
   Template.user_avatar.helpers({
     avatar: function () {
-      return Avatar.find();
+      return Avatar.find({
+        owner: Meteor.userId()
+      });
     }
   });
   Template.levelSelect.onRendered( function(){
@@ -103,6 +114,5 @@ Levels = new Mongo.Collection("levels");
 
 
 if (Meteor.isClient){
-  Meteor.subscribe("avatar");
-  Meteor.subscribe("levels");
+  Meteor.subscribe("avatar_levels");
 }

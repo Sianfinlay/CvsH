@@ -29,6 +29,19 @@ Router.route('/account', {
     	}
     }
 });
+Router.route('/leaderboard', {
+    name: 'leaderboard',
+    template: 'leaderboard',
+    title: 'Leaderboard',
+    onBeforeAction: function(){
+        var currrentUser = Meteor.userId();
+        if(currrentUser){
+            this.next();
+        } else {
+            this.redirect('/');
+        }
+    }
+});
 Router.route('/levels', {
     name: 'levels',
     template: 'levelSelect',

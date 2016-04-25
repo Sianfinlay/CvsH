@@ -1,30 +1,18 @@
 // levels
 Template.levelSelect.helpers({
     levels: function () {
-      return Levels.find();
+		var stars = 0;
+	    Levels.find({owner: Meteor.userId()}).map(function(doc) {
+	      stars += doc.score;
+	    });
+	    Meteor.call("updateStars", stars);
+      	return Levels.find();
     }
   });
 Template.account.helpers({
 	// total user's score
     starCount: function () {
-    	var stars = 0;
-      	Levels.find({level:1}).map(function(doc) {
-		  stars += doc.score;
-		});
-		Levels.find({level:2}).map(function(doc) {
-		  stars += doc.score;
-		});
-		Levels.find({level:3}).map(function(doc) {
-		  stars += doc.score;
-		});
-		Levels.find({level:4}).map(function(doc) {
-		  stars += doc.score;
-		});
-		Levels.find({level:5}).map(function(doc) {
-		  stars += doc.score;
-		});
-
-		return stars;
+      	return Leaderboard.find({owner: Meteor.userId()});
     }
   });
 Template.level1Modal.events({ 
@@ -36,6 +24,7 @@ Template.level1Modal.events({
 	    // Insert avatar changes
 	    Meteor.call("updateLevel", 1, newScore);
 	    Router.go('/levels');
+	    
 	}
 });
 Template.level2Modal.events({ 
@@ -47,6 +36,7 @@ Template.level2Modal.events({
 	    // Insert avatar changes
 	    Meteor.call("updateLevel", 2, newScore);
 	    Router.go('/levels');
+
 	}
 });
 Template.level3Modal.events({ 
@@ -58,6 +48,7 @@ Template.level3Modal.events({
 	    // Insert avatar changes
 	    Meteor.call("updateLevel", 3, newScore);
 	    Router.go('/levels');
+
 	}
 });
 Template.level4Modal.events({ 

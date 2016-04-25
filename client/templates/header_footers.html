@@ -7,7 +7,7 @@
 			</section>
 			<section class="col l3 offset-l5 m4 offset-m3 s4 ">
 				{{#if currentUser}}
-				<div class="right-align">
+				<div class="right-align col s12">
 						Welcome, {{currentUser.username}}{{currentUser.profile.name}}		
 				</div>
 				{{> dropdown_nav}}
@@ -23,13 +23,14 @@
 
 <template name="dropdown_nav">
 	<div class="right">
-		<a href="#" class="dropdown-button" data-activates='dropdown-nav'>
+		<a href="#" class="dropdown-button col s12" data-activates='dropdown-nav'>
 			<i class="material-icons right">settings</i>Settings
 		</a>
 		<ul id='dropdown-nav' class='dropdown-content'>
 		    <li><a href="{{pathFor route='account'}}">Account</a></li>
 		    <li><a href="{{pathFor route='levels'}}">Levels</a></li>
 		    <li><a href="{{pathFor route='customisation'}}">Customise</a></li>
+		    <li><a href="{{pathFor route='leaderboard'}}">Leaderboard</a></li>
 		    <li class="divider"></li>
 			<li><a href="#" class="logout">Log Out</a></li>
 		</ul>
