@@ -13,11 +13,6 @@ Levels = new Mongo.Collection("levels");
     $('#level1Hint').openModal();
     $('.modal-trigger').leanModal();
   });
-  Template.level1Modal.helpers({
-    score: function () {
-      return score;
-    }
-  });
   Template.level2Modal.onRendered( function(){
     $('#level2Hint').openModal();
     $('.modal-trigger').leanModal();
@@ -98,11 +93,16 @@ Levels = new Mongo.Collection("levels");
           }
       }
     });
+    function reinitSwiper(swiper) {
+      setTimeout(function () {
+       swiper.onResize();
+      }, 500);
+    };
+    reinitSwiper(mySwiper);
   });
 
 
 if (Meteor.isClient){
   Meteor.subscribe("avatar");
   Meteor.subscribe("levels");
-  
 }

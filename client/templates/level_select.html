@@ -12,66 +12,26 @@
 			<section class="col l8 offset-l2 m8 offset-m3 level">
 				<div id="levelSelection" class="swiper-container">
         			<div class="swiper-wrapper">
-        				<!-- level 1 -->
-        				<div class="swiper-slide">
-        					<section class=" col s12">
-        						<a href="{{pathFor route='level1'}}"><div class="levelNumber">1</div>
+				    {{#if currentUser}}
+                                            {{#each levels}}
+                                            <div class="swiper-slide">        
+        					<section class="col s12">
+        						<a href="/levels/{{level}}"><div class="levelNumber">{{level}}</div>
         						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>1/2</span>
+        							<span><i class="material-icons left">star_rate</i>{{score}}/{{maxScore}}</span>
         						</div>
         						<div class="levelStats">
-        							<span><i class="material-icons left">done</i>Completed</span>
+                                                                {{#if completed}}
+                                                                  <span><i class="material-icons left">done</i>Done</span>
+                                                                {{else}}
+                                                                  <span><i class="material-icons left">clear</i>Not done</span>
+                                                                {{/if}}
         						</div></a>
         					</section>
-			            </div>
-			            <!-- level 2 -->
-			            <div class="swiper-slide">
-        					<section class=" col s12">
-        						<a href="{{pathFor route='level2'}}"><div class="levelNumber">2</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>1/2</span>
-        						</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">done</i>Completed</span>
-        						</div></a>
-        					</section>
-			            </div>
-			            <!-- level 3 -->
-			            <div class="swiper-slide">
-			                <section class=" col s12">
-        						<a href="{{pathFor route='level3'}}"><div class="levelNumber">3</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>1/2</span>
-        						</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">done</i>Completed</span>
-        						</div></a>
-        					</section>
-			            </div>
-			            <!-- level 4 -->
-			            <div class="swiper-slide">
-			                <section class=" col s12">
-        						<a href="{{pathFor route='level4'}}"><div class="levelNumber">4</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>1/2</span>
-        						</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">done</i>Completed</span>
-        						</div></a>
-        					</section>
-			            </div>
-			            <!-- level 5 -->
-			            <div class="swiper-slide">
-			                <section class=" col s12">
-        						<a href="{{pathFor route='level5'}}"><div class="levelNumber">5</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">star_rate</i>1/2</span>
-        						</div>
-        						<div class="levelStats">
-        							<span><i class="material-icons left">done</i>Completed</span>
-        						</div></a>
-        					</section>
-			            </div>
+        			            </div>
+                                            {{/each}}
+                                    {{/if}}
+			            
         			</div>
         			<!-- If we need pagination -->
 			        <div class="swiper-pagination"></div>

@@ -1,23 +1,25 @@
 Levels = new Mongo.Collection("levels");
 	Meteor.methods({
-		addLevel: function (maxScore, userId) {
+		addLevel: function (levelNo, maxScore) {
 			//Make sure the user is sign up before creating an avatar
 			
 
 			// example of level insert
 			Levels.insert({
+				level: levelNo,
 				score: 0,
 				maxScore: maxScore,
 				completed: false,
 				owner: user._id
 			});
 		},
-		updateLevel: function (score) {
+		updateLevel: function (levelNo, score) {
 			var levels = Levels.findOne({
 				owner: this.userId
 			});
 			
 			Levels.update({
+				level: levelNo,
 				owner: this.userId
 			}, { 
 				$set: {
@@ -25,15 +27,5 @@ Levels = new Mongo.Collection("levels");
 					completed: true
 				}
 			});
-		},
-		deleteLevel: function (avatarId) {
-			var levels = Levels.findOne(avatarId);
-			if (levels.owner !== Meteor.userId()) {
-				throw new Meteor.Error("not-authorized");
-			}
-
-			//Levels.remove(avatarId) {
-
-			//}
 		}
 	});

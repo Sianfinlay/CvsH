@@ -11,6 +11,7 @@ if (Meteor.isServer) {
 
 		// level 1 insert
 	    Levels.insert({
+	    	level: 1,
 			score: 0,
 			maxScore: 2,
 			completed: false,
@@ -18,29 +19,33 @@ if (Meteor.isServer) {
 		});
 		// level 2 insert
 	    Levels.insert({
+	    	level: 2,
 			score: 0,
-			maxScore: 0,
+			maxScore: 4,
 			completed: false,
 			owner: user._id
 		});
 		// level 3 insert
 	    Levels.insert({
+	    	level: 3,
 			score: 0,
-			maxScore: 0,
+			maxScore: 6,
 			completed: false,
 			owner: user._id
 		});
 		// level 4 insert
 	    Levels.insert({
+	    	level: 4,
 			score: 0,
-			maxScore: 0,
+			maxScore: 6,
 			completed: false,
 			owner: user._id
 		});
 		// level 5 insert
 	    Levels.insert({
+	    	level: 5,
 			score: 0,
-			maxScore: 0,
+			maxScore: 2,
 			completed: false,
 			owner: user._id
 		});
@@ -56,6 +61,7 @@ if (Meteor.isServer) {
 	  	return user;
 
 	});		
+	
 	// this code only runs on the server
 	// only publish avatar and levels that belongs to current user
 	Meteor.publish("avatar", function () {

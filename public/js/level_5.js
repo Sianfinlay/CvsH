@@ -1,9 +1,11 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
+// initiate scores for dislay and input
 $('.scoreMessage').html("You failed to summon the puppy army D: REMEMBER: <code>src</code> we need to get the image, and <code>alt</code> we describe the image.");
 // put score in results modal
 $('.score').html(score);
+$('#newScore').val(score);
     function loadImages(sources, callback) {
         var assetDir = '/assets/levels/5/';
         var images = {};
@@ -144,6 +146,7 @@ $('.score').html(score);
                                 // put new score in modal
                                 $('.scoreMessage').html("Haha, that's right HexaBunnies! Fear the power of our puppy army <section class='section'><img class='responsive-img' src='/images/puppy_army.jpg' alt='cute puppy army'/></section>");
                                 $('.score').html(score);
+                                $('#newScore').val(score);
                                 drawBackground(background, images.background, text);
                             }
                             console.log(score);
@@ -158,6 +161,7 @@ $('.score').html(score);
                         }
                         else {
                            score -= 1; 
+                           $('#newScore').val(score);
                         }
                         console.log(score);
                     }

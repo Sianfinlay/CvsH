@@ -1,10 +1,11 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-// change to display lose messsage for the level
+// initiate scores for dislay and input
 $('.scoreMessage').html("There's just too many HexaBunnies! REMEMBER: 1,2,3 is an ordered list, without is just an unordered list.");
 // put score in results modal
 $('.score').html(score);
+$('#newScore').val(score);
     function loadImages(sources, callback) {
         // change to match which level it is
         var assetDir = '/assets/levels/3/';
@@ -182,6 +183,7 @@ $('.score').html(score);
                                 // put new score in modal
                                 $('.scoreMessage').html("1 HexaBunny, 2 HexaBunnies, 3 HexaBunnies... you can take 'em all on!");
                                 $('.score').html(score);
+                                $('#newScore').val(score);
                                 drawBackground(background, images.background, text);
                             }
                             console.log(score);
@@ -195,7 +197,8 @@ $('.score').html(score);
                             console.log("no score")
                         }
                         else {
-                           score -= 1; 
+                           score -= 1;
+                           $('#newScore').val(score); 
                         }
                         console.log(score);
                     }

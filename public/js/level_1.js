@@ -1,9 +1,11 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
+// initiate scores for dislay and input
 $('.scoreMessage').html("It's okay, you can try again next time. REMEMBER: <code>&lt;opening&gt;</code> and <code>&lt;/closing&gt;</code>");
 // put score in results modal
 $('.score').html(score);
+$('#newScore').val(score);
     function loadImages(sources, callback) {
         var assetDir = '/assets/levels/1/';
         var images = {};
@@ -138,12 +140,14 @@ $('.score').html(score);
                             score += 1;
 
                             $('.score').html(score);
+                            $('#newScore').val(score);
                             //change to match score
                             if(score >= 2) {
                                 var text = '';
                                 // put new score in modal
                                 $('.scoreMessage').html("You've learnt you first Element! Keep this up and you'll beat those HexaBunnies back to their planet!");
                                 $('.score').html(score);
+                                $('#newScore').val(score);
                                 drawBackground(background, images.background, text);
                             }
                             console.log(score);
@@ -157,7 +161,9 @@ $('.score').html(score);
                             console.log("no score")
                         }
                         else {
+
                            score -= 1; 
+                           $('#newScore').val(score);
                         }
                         console.log(score);
                     }

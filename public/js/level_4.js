@@ -1,10 +1,11 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
 score = 0;
-// change to display lose messsage for the level
+// initiate scores for dislay and input
 $('.scoreMessage').html("You have to see the point of this fight! REMEMBER: <code>&lt;h1&gt;</code> biggest and <code>&lt;h6&gt;</code> smallest");
 // put score in results modal
 $('.score').html(score);
+$('#newScore').val(score);
     function loadImages(sources, callback) {
         // change to match which level it is
         var assetDir = '/assets/levels/4/';
@@ -182,6 +183,7 @@ $('.score').html(score);
                                 // put new score in modal
                                 $('.scoreMessage').html("Okay, New we got are point across let's knock 'em down!");
                                 $('.score').html(score);
+                                $('#newScore').val(score);
                                 drawBackground(background, images.background, text);
                             }
                             console.log(score);
@@ -196,6 +198,7 @@ $('.score').html(score);
                         }
                         else {
                            score -= 1; 
+                           $('#newScore').val(score);
                         }
                         console.log(score);
                     }
