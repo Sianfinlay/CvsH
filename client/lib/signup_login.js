@@ -47,6 +47,15 @@
                 Router.go('/customisation');
             }
         });
+    },
+    'click .twitter_btn':function(event){
+        event.preventDefault();
+
+        Meteor.loginWithTwitter(function(err){
+            if(!err) {
+                Router.go('/customisation');
+            }
+        });
     }
   });
  // login 
@@ -65,6 +74,15 @@
  	'click .face_btn':function(event){
         event.preventDefault();
         Meteor.loginWithFacebook(function(err){
+            if(!err) {
+                Router.go('/account');
+            }
+        });
+    },
+    'click .twitter_btn':function(event){
+        event.preventDefault();
+
+        Meteor.loginWithTwitter(function(err){
             if(!err) {
                 Router.go('/account');
             }

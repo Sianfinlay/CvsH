@@ -1,7 +1,5 @@
 // facebook login
 ServiceConfiguration.configurations.remove({service: "facebook"});
-ServiceConfiguration.configurations.remove({service: "twitter"});
-
 
 ServiceConfiguration.configurations.insert({
   service: "facebook",
@@ -9,12 +7,13 @@ ServiceConfiguration.configurations.insert({
   secret: "1983cb0435f0d43977ed8092a89b698d"
 });
 
-// twitter doesn't work
-/*Accounts.loginServiceConfiguration.remove({
+
+// twitter login
+Accounts.loginServiceConfiguration.remove({
   service: "twitter"
 });
 Accounts.loginServiceConfiguration.insert({
   service: "twitter",
-  consumerKey: "yourConsumerKey",
-  secret: "yourSecret"
-});*/
+  consumerKey: "YHsL2VwXpWxmivnItO7nVoUqR",
+  secret: "HH0jVAugFoaQPnjf0pnSDAg7zMtYNOJmg781AYXAIEWHggvbGO"
+});
