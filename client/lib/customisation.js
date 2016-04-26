@@ -36,7 +36,7 @@ Template.custom_slider.onRendered( function(){
       hair = $('input[name=althair]').val();
     }
     if(outfit == null){
-      outfit = $('input[name=altoutfit').val();
+      outfit = $('input[name=altoutfit]').val();
     }
     // Insert avatar changes
     Meteor.call("updateAvatar", skin, hair, outfit);
