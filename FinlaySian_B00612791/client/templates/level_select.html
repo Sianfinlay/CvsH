@@ -1,0 +1,53 @@
+<!-- level select -->
+
+<template name="levelSelect">
+	{{> header}}
+	<main>
+	{{> user_avatar}}
+	<section class="container levels">
+		<div class="row">
+			<section class="col l6 offset-l2 m6 offset-m3 s10 offset-s1">
+				<h4>Levels</h4>
+			</section>	
+			<section class="col l8 offset-l2 m8 offset-m3 level">
+				<div id="levelSelection" class="swiper-container">
+        			<div class="swiper-wrapper">
+				    {{#if currentUser}}
+                        {{#each levels}}
+                        <div class="swiper-slide">        
+    					<section class="col s12">
+    						<a href="/levels/{{level}}"><div class="levelNumber">{{level}}</div>
+    						<div class="levelStats">
+    							<span><i class="material-icons left">star_rate</i>{{score}}/{{maxScore}}</span>
+    						</div>
+    						<div class="levelStats">
+                                {{#if completed}}
+                                  <span><i class="material-icons left">done</i>Done</span>
+                                {{else}}
+                                  <span><i class="material-icons left">clear</i>Not done</span>
+                                {{/if}}
+    						</div></a>
+    					</section>
+			            </div>
+                    	{{/each}}
+            		{{/if}}
+			            
+        			</div>
+        			<!-- If we need pagination -->
+			        <div class="swiper-pagination"></div>
+			        
+			        <!-- If we need navigation buttons -->
+			        <div class="swiper-button-prev"></div>
+	        		<div class="swiper-button-next"></div>
+        		</div>
+			</section>
+			<section class="col l6 offset-l2 m6 offset-m3 s10 offset-s1 levelBigger">
+				<p> Please Rotate your screen. If you are on a Phone, This game can only played on Tablet or Computer</p>
+				<a href="{{pathFor route='account'}}" class="col s12 levelBigger btn waves-effect waves-light goBack">Go Back to account</a>
+			</section>
+		</div>
+
+	</section>
+	{{> hexabunnies}}
+	</main>
+</template>

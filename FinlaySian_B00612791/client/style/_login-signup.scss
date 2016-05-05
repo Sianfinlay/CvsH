@@ -1,0 +1,66 @@
+// login and sign up
+$input-focus-color: #F39300;
+$input-success-color: #00F393;
+div.signup_login_modal {
+	div.modal-content{
+		.row {margin-bottom: 0;}
+		h4{
+			color: $dark-purple;
+		}
+		section{
+			p.parent-per{
+				label {
+					padding-left: rem(5);
+					padding-right: rem(10);
+				}
+				label:before,
+  				&:not(.filled-in) + label:after {
+  					left: 100%;
+  				}
+			}	
+			.social_head {
+				margin-bottom: rem(25);
+			}
+			.social_space {
+				margin-bottom: rem(20);
+			}
+			.social_btn {
+			padding: 0;
+			width: 100%;
+			}
+			.face_btn {
+				background-color: $facebook-blue;
+			}
+			.twitter_btn {
+				background-color: $twitter-blue;
+			}	
+		}
+		.normal_signup {
+
+			@media only screen and (min-width: 1000px) {
+				border-bottom: none;
+				border-right: 1px solid $border-grey;
+			}
+		}
+		.social_login {
+			@media only screen and (min-width: 1000px) {
+				border-top: none;
+				border-left: 1px solid $border-grey;
+			}
+		}
+	}
+	div.modal-footer {
+		.waves-effect.waves-gree .waves-ripple {
+				background-color: $city-green;
+		}
+		.waves-effect.waves-oran .waves-ripple {
+				background-color: $city-orange;
+		}
+		.btn, .btn-flat {
+			float: left;
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+}

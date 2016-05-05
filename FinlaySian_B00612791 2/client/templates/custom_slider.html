@@ -1,0 +1,275 @@
+<template name="custom_slider">
+	<div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s3"><a class="active" href="#Skin">Skin</a></li>
+        <li class="tab col s3"><a href="#Hair">Hair</a></li>
+        <li class="tab col s3"><a href="#Outfit">Outfit</a></li>
+      </ul>
+    </div>
+        {{> skin}}
+        {{> hair}}
+        {{> outfit}}
+</template>
+
+<template name="skin">
+    <div id="Skin" class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/skin/skin_1.svg" class="ava_base">
+                <input type="radio" class="radio_item" value="skin_1" name="skin" id="skin1" /> 
+                
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/skin/skin_2.svg" class="ava_base">
+                <input type="radio" class="radio_item" value="skin_2" name="skin" id="skin2" /> 
+                
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/skin/skin_3.svg" class="ava_base">
+                <input type="radio" class="radio_item" value="skin_3" name="skin" id="skin3" /> 
+                
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/skin/skin_4.svg" class="ava_base">
+                <input type="radio" class="radio_item" value="skin_4" name="skin" id="skin4" />
+                
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/skin/skin_5.svg" class="ava_base">
+                <input type="radio" class="radio_item" value="skin_5" name="skin" id="skin5" />            
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+    </div>
+</template>
+
+<template name="hair">
+    <div id="Hair" class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- first set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_1_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_1_black" name="hair" id="hair1" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_1_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_1_blonde" name="hair" id="hair2" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_1_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_1_brown" name="hair" id="hair3" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_1_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_1_red" name="hair" id="hair4" />            
+            </div>
+            <!-- first set ends -->
+            <!-- Second set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_2_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_2_black" name="hair" id="hair5" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_2_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_2_blonde" name="hair" id="hair6" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_2_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_2_brown" name="hair" id="hair7" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_3_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_3_red" name="hair" id="hair8" />            
+            </div>
+            <!-- second set ends -->
+            <!-- Third set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_3_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_3_black" name="hair" id="hair9" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_3_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_3_blonde" name="hair" id="hair10" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_3_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_3_brown" name="hair" id="hair11" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_3_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_3_red" name="hair" id="hair12" />         
+            </div>
+            <!-- Third set ends -->
+            <!-- Fourth set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_4_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_4_black" name="hair" id="hair13" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_4_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_4_blonde" name="hair" id="hair14" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_4_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_4_brown" name="hair" id="hair15" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_4_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_4_red" name="hair" id="hair16" />         
+            </div>
+            <!-- Fourth set ends -->
+            <!-- Fifth set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_5_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_5_black" name="hair" id="hair17" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_5_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_5_blonde" name="hair" id="hair18" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_5_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_5_brown" name="hair" id="hair19" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_5_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_5_red" name="hair" id="hair20" />         
+            </div>
+            <!-- Fifth set ends -->
+            <!-- Sixth set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_6_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_6_black" name="hair" id="hair21" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_6_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_6_blonde" name="hair" id="hair22" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_6_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_6_brown" name="hair" id="hair23" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_6_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_6_red" name="hair" id="hair24" />         
+            </div>
+            <!-- Sixth set ends -->
+            <!-- Seventh set of hair -->
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_7_black.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_7_black" name="hair" id="hair25" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_7_blonde.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_7_blonde" name="hair" id="hair26" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_7_brown.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_7_brown" name="hair" id="hair27" /> 
+                
+            </div>
+            <div class="swiper-slide hair-slider">
+                <img src="/images/dressup_display/hair/hair_7_red.svg" class="ava_hair">
+                <input type="radio" class="radio_item" value="hair_7_red" name="hair" id="hair28" />         
+            </div>
+            <!-- Seventh set ends -->
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</template>
+
+<template name="outfit">
+    <div id="Outfit" class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_1.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_1" name="outfit" id="outfit1" /> 
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_2.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_2" name="outfit" id="outfit2" /> 
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_3.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_3" name="outfit" id="outfit3" /> 
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_4.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_4" name="outfit" id="outfit4" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_5.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_5" name="outfit" id="outfit5" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_6.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_6" name="outfit" id="outfit6" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_7.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_7" name="outfit" id="outfit7" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_8.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_8" name="outfit" id="outfit8" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_9.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_9" name="outfit" id="outfit9" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_10.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_10" name="outfit" id="outfit10" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_11.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_11" name="outfit" id="outfit11" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/images/dressup_display/outfit/dress_12.svg" class="ava_outfit">
+                <input type="radio" class="radio_item" value="dress_12" name="outfit" id="outfit12" />
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+    </div>
+</template>

@@ -1,0 +1,32 @@
+
+
+<template name="leaderboard">
+	{{> header}}
+	<main>
+	{{> user_avatar}}
+	<section class="container">
+		<div class="row">
+			<section class="col l7 offset-l2 m6 offset-m5 s10 offset-s1">
+				<h4>leaderboard</h4>
+				{{#each leaderboard}}
+				<section class="col l4  m6  s12">
+					<section class="card">
+						{{#each avatarObj}}
+			            <div class="card-image avatarLead">
+			              	<img src="/images/dressup/skin/{{skin}}.svg" class="base">
+							<img src="/images/dressup/outfit/{{outfit}}.svg" class="outfit">
+							<img src="/images/dressup/hair/{{hair}}.svg" class="hair">    
+			            </div>
+			            {{/each}}
+			            <div class="card-content">
+			              <p class="center-align"><span><i class="material-icons starLeader">star_rate</i>: {{stars}}</span></p>
+			            </div>
+		        	</section>
+				</section>
+				{{/each}}
+			</section>
+		</div>
+	</section>
+	{{> hexabunnies}}
+	</main>
+</template>

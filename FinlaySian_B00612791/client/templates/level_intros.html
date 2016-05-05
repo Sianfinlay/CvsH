@@ -1,0 +1,284 @@
+<!-- level intros -->
+<!-- Level 1 -->
+<template name="level1Modal">
+	<div id="level1Hint" class="signup_login_modal modal modal-fixed-footer">
+		<form>
+			<div class="modal-content">
+		      <h4 class="center-align">Level 1: P-P-Paragraphs</h4>
+		      <div class="row">
+		      	<article class="col s8 offset-s2">
+		      		<section class="section">
+			      		<p><strong>Okay, let's get started...</strong></p>
+			      		<p>We need to use <em>'elements'</em> to fight off the HexaBunnies. Elements are a part of the language of websites called <em>'HTML'</em>. They create what we see when we visited a website, like friend's post of Facebook!</p>
+			      		<p>Elements have two important parts to them. an opening and closing <em>'tag'</em>.</p>
+			      		<p>Opening tag looks like this: <code>&lt;tag&gt;</code></p>
+			      		<p>Whilst Closing tag is like this: <code>&lt;/tag&gt;</code></p>
+			      		<p>Put them both together and you get:</p>
+			      		<blockquote><code>&lt;tag&gt;</code> an element <code>&lt;/tag&gt;</code></blockquote>
+			      	</section>
+			      	<div class="divider"></div>
+			      	<section class="section">
+			      		<p>Let's blast a <em>'paragraph'</em> element at those HexaBunnies:</p>
+			      		<blockquote><code>&lt;p&gt;</code> Paragraphs use the letter <strong>'p'</strong> in their tags, inside them is always a block of sentences like in a storybook. <code>&lt;/p&gt;</code></blockquote>
+			      		<p>Drag the paragraph tags in the correct place to complete the Element.</p>
+			      	</section>
+		      	</article>
+		      	
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <a href="" class="modal-action modal-close waves-effect waves-gree btn-flat">Okay!</a>
+		    </div>
+	    </form>
+	</div>
+	<div id="level1Submit" class="signup_login_modal modal modal-fixed-footer">
+		<form class="Level1form">
+			<div class="modal-content">
+		      <h4 class="center-align">Level 1: Results!</h4>
+		      <div class="row">
+		      	<div class="scoreResult"><i class="material-icons">star_rate</i><span class="score"></span> / 2</div>
+		      	<p class="scoreMessage col s8 offset-s2"></p>
+		      </div>
+		    </div>
+
+		    <input type="hidden" id="newScore" name="newScore" />
+		    <div class="modal-footer">
+		      <button class="sumbitScore modal-action modal-close waves-effect waves-gree btn-flat" type="submit" name="action">Done!</button>
+		    </div>
+	    </form>
+	</div>
+</template>
+<!-- Level 2 -->
+<template name="level2Modal">
+	<div id="level2Hint" class="signup_login_modal modal modal-fixed-footer">
+		<form>
+			<div class="modal-content">
+		      <h4 class="center-align">Level 2: Strong and Important!</h4>
+		      <div class="row">
+		      	<article class="col s8 offset-s2">
+		      		<section class="section">
+			      		<p>Now you know how to use an element it's time to learn some more, something to make your paragraph elements <strong>stronger</strong> and hit <em>important</em> weak points on the HexaBunnies!</p>
+			      	</section>
+			      	<div class="divider"></div>
+			      	<section class="section">
+			      		<p>The <strong>Strong</strong> element is used when you want make some words stand out:</p>
+			      		<blockquote><code>&lt;strong&gt;</code> <strong>Any words placed inside a 'strong' element will look bolder.</strong> <code>&lt;/strong&gt;</code></blockquote>
+			      		<p>The <em>em</em> element is used to make words important or to 'emphasis' them:</p>
+			      		<blockquote><code>&lt;em&gt;</code> <em>Any words placed inside a 'em' element will look slanted, or italicized.</em> <code>&lt;/em&gt;</code></blockquote>
+			      		<p>Now try to use them on the HexaBunnies!</p>
+			      	</section>
+		      	</article>
+		      	
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <a href="" class="modal-action modal-close waves-effect waves-gree btn-flat">Okay!</a>
+		    </div>
+	    </form>
+	</div>
+	<div id="level2Submit" class="signup_login_modal modal modal-fixed-footer">
+		<form class="Level2form">
+			<div class="modal-content">
+		      <h4 class="center-align">Level 2: Results!</h4>
+		      <div class="row">
+		      	<div class="scoreResult"><i class="material-icons">star_rate</i><span class="score"></span> / 4</div>
+		      	<p class="scoreMessage col s8 offset-s2"></p>
+		      </div>
+		    </div>
+
+		    <input type="hidden" id="newScore" name="newScore" />
+		    <div class="modal-footer">
+		      <button class="sumbitScore modal-action modal-close waves-effect waves-gree btn-flat" type="submit" name="action">Done!</button>
+		    </div>
+	    </form>
+	</div>
+</template>
+<!-- Level 3 -->
+<template name="level3Modal">
+	<div id="level3Hint" class="signup_login_modal modal modal-fixed-footer">
+		<form>
+			<div class="modal-content">
+		      <h4 class="center-align">Level 3: List after list after list</h4>
+		      <div class="row">
+		      	<article class="col s8 offset-s2">
+		      		<section class="section">
+			      		<p>We're fighting more than just one HexaBunny here; let's see there's:</p>
+			      		<ol>
+			      			<li>Ginger</li>
+			      			<li>Mint</li>
+			      			<li>Twilight</li>
+			      		</ol>
+			      		<p>That's 3 HexaBunnies, we gotta create some <strong>'lists'</strong> to help us!</p>
+			      	</section>
+			      	<div class="divider"></div>
+			      	<section class="section">
+			      		<p>There are 3 elements used to create lists; <code>&lt;li&gt;</code>, <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>.</p>
+			      		<p>let's start with <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code>, you combine these 2 elements to create an <strong>'unordered list'</strong>, which looks like:</p>
+			      		<div class="row">
+			      			<section class="col s6">
+				      			<ul class="forShow">
+				      				<li>Ginger</li>
+				      				<li>Mint</li>
+				      				<li>Twilight</li>
+				      			</ul>
+				      		</section>
+				      		<section class="col s6">
+				      			<p><code>&lt;ul&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Ginger <code>&lt;/li&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Mint <code>&lt;/li&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Twilight <code>&lt;/li&gt;</code></p>
+				      			<p><code>&lt;/ul&gt;</code></p>
+				      		</section>
+			      		</div>
+			      		<p>Next we'll use <code>&lt;ol&gt;</code> and again <code>&lt;li&gt;</code>. This will create an ordered list going from 1,2,3...:</p>
+			      		<div class="row">
+			      			<section class="col s6">
+				      			<ol>
+				      				<li>Ginger</li>
+				      				<li>Mint</li>
+				      				<li>Twilight</li>
+				      			</ol>
+				      		</section>
+				      		<section class="col s6">
+				      			<p><code>&lt;ol&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Ginger <code>&lt;/li&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Mint <code>&lt;/li&gt;</code></p>
+				      				<p><code>&lt;li&gt;</code> Twilight <code>&lt;/li&gt;</code></p>
+				      			<p><code>&lt;/ol&gt;</code></p>
+				      		</section>
+			      		</div>
+			      		<p>Show those HexaBunnies that you know your list types!</p>
+			      	</section>
+		      	</article>
+		      	
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <a href="" class="modal-action modal-close waves-effect waves-gree btn-flat">Okay!</a>
+		    </div>
+	    </form>
+	</div>
+	<div id="level3Submit" class="signup_login_modal modal modal-fixed-footer">
+		<form class="Level3form">
+			<div class="modal-content">
+		      <h4 class="center-align">Level 3: Results!</h4>
+		      <div class="row">
+		      	<div class="scoreResult"><i class="material-icons">star_rate</i><span class="score"></span> / 6</div>
+		      	<p class="scoreMessage col s8 offset-s2"></p>
+		      </div>
+		    </div>
+
+		    <input type="hidden" id="newScore" name="newScore" />
+		    <div class="modal-footer">
+		      <button class="sumbitScore modal-action modal-close waves-effect waves-gree btn-flat" type="submit" name="action">Done!</button>
+		    </div>
+	    </form>
+	</div>
+</template>
+<!-- Level 4 -->
+<template name="level4Modal">
+	<div id="level4Hint" class="signup_login_modal modal modal-fixed-footer">
+		<form>
+			<div class="modal-content">
+		      <h4 class="center-align">Level 4: Get a head-ing the Game</h4>
+		      <div class="row">
+		      	<article class="col s8 offset-s2">
+		      		<section class="section">
+			      		<p>So what's this fight all about? We can't just start our attack with just a paragraph element, we need a subject, a point, a <strong>'heading'</strong>.</p>
+			      		<p>So let's learn the heading, there are several heading elements which differ on how <strong>'important'</strong> it and the content of the element below it are going to be!</p>
+			      	</section>
+			      	<div class="divider"></div>
+			      	<section class="section">
+			      		<p>The heading element are; <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code> and <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> being the most important and biggest, and <code>&lt;h6&gt;</code> being the least important and smallest. Inside a heading element is a title.</p>
+			      		<blockquote>
+			      			<p><code>&lt;h1&gt;</code> Important Title<code>&lt;/h1&gt;</code></p>
+			      			<p><code>&lt;p&gt;</code> the content <code>&lt;/p&gt;</code></p>
+			      			<p>...</p>
+			      			<p><code>&lt;h2&gt;</code>Less Important Title<code>&lt;/h2&gt;</code></p>
+			      		</blockquote>
+			      		<p>Try to put the titles in the right heading element: from biggest to smallest.</p>
+
+			      	</section>
+		      	</article>
+		      	
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <a href="" class="modal-action modal-close waves-effect waves-gree btn-flat">Okay!</a>
+		    </div>
+	    </form>
+	</div>
+	<div id="level4Submit" class="signup_login_modal modal modal-fixed-footer">
+		<form class="Level4form">
+			<div class="modal-content">
+		      <h4 class="center-align">Level 4: Results!</h4>
+		      <div class="row">
+		      	<div class="scoreResult"><i class="material-icons">star_rate</i><span class="score"></span> / 6</div>
+		      	<p class="scoreMessage col s8 offset-s2"></p>
+		      </div>
+		    </div>
+
+		    <input type="hidden" id="newScore" name="newScore" />
+		    <div class="modal-footer">
+		      <button class="sumbitScore modal-action modal-close waves-effect waves-gree btn-flat" type="submit" name="action">Done!</button>
+		    </div>
+	    </form>
+	</div>
+</template>
+<!-- Level 5 -->
+<template name="level5Modal">
+	<div id="level5Hint" class="signup_login_modal modal modal-fixed-footer">
+		<form>
+			<div class="modal-content">
+		      <h4 class="center-align">Level 5: An Image can say a 1000 words</h4>
+		      <div class="row">
+		      	<article class="col s8 offset-s2">
+		      		<section class="section">
+			      		<p>Ugh! so many words! They might be working against the HexaBunnies but is there something else you can do. You know, with some colour and maybe throw some fun into the fight!</p>
+			      		<p>Like cute pictures of puppies. Yeah! get an army of puppies!</p>
+			      		<p>Let's learn about the power of the <strong>'image'</strong> element, <code>&lt;img /&gt;</code>.</p>
+			      	</section>
+			      	<div class="divider"></div>
+			      	<section class="section">      		
+			      		<p>The image element is a special element. Not only does it not need a closing tag, but it has hidden abilities from inside the tag, called attritubes!</p>
+			      		<p>First is the <code>src</code> attritube, this 'summons' the image of our puppy army to us by using several <code>/</code> to get it from its source.</p>
+			      		<blockquote>
+			      			<code>&lt;img </code><code>src="images/puppy_army.jpg"</code><code>/&gt;</code>
+			      		</blockquote>
+			      		<p>Next attritube, <code>alt</code>, helps to power up our image by describing the image, like "cute puppy army". This means the image can affect more special types of HexaBunnies that aren't affected by an image normally. On website, <code>alt</code> is a force of good! Letting people who can't see an image still enjoy it, like our puppy army!</p>
+			      		<blockquote>
+			      			<code>&lt;img </code><code>alt="cute puppy army"</code><code>/&gt;</code>
+			      		</blockquote>
+			      		<p>Let's see if you can use the image elements' special attributes!</p>
+			      	</section>
+		      	</article>
+		      	
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <a href="" class="modal-action modal-close waves-effect waves-gree btn-flat">Okay!</a>
+		    </div>
+	    </form>
+	</div>
+	<div id="level5Submit" class="signup_login_modal modal modal-fixed-footer">
+		<form class="Level5form">
+			<div class="modal-content">
+		      <h4 class="center-align">Level 5: Results!</h4>
+		      <div class="row">
+		      	<div class="scoreResult"><i class="material-icons">star_rate</i><span class="score"></span> / 2</div>
+		      	<p class="scoreMessage col s8 offset-s2"></p>
+		      </div>
+		    </div>
+
+		    <input type="hidden" id="newScore" name="newScore" />
+		    <div class="modal-footer">
+		      <button class="sumbitScore modal-action modal-close waves-effect waves-gree btn-flat" type="submit" name="action">Done!</button>
+		    </div>
+	    </form>
+	</div>
+</template>

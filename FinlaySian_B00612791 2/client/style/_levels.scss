@@ -1,0 +1,110 @@
+// level style
+
+.level {
+
+	@media only screen and (min-width: 0px){
+		display: none;
+	}
+	@media only screen and (min-width: 601px){
+		display: block;
+		margin-top: 0px;
+	}
+	.hint_Submit {
+		margin-bottom: 15px;
+		.Hint {
+			color: $mid-purple;
+			&:hover {
+				color: $light-purple;
+			}
+		}
+	}
+	.swiper-slide {
+		background-color: transparent;
+		a{
+			&:hover {
+				.levelNumber {
+					color: $mid-purple;
+					border: 2px solid $mid-purple;
+				}
+				.levelStats {
+					color: $mid-purple;
+				}
+			}
+			.levelNumber {
+			font-size: rem(48);
+			font-family: 'Dosis', arial, sans-serif;
+			color: $light-purple;
+			background-color: #fff;
+			padding: 35px;
+			border: 2px solid $light-purple;
+			border-radius: 10px;
+			}
+			.levelStats {
+				margin-top: 10px;
+				font-size: rem(18);
+				font-family: 'Dosis', arial, sans-serif;
+				color: $light-purple;
+				text-align: left;
+			}
+		}
+	}
+}
+a.SubmitLevel {
+	font-size: rem(18);
+	background-color: $mid-purple;
+	box-shadow: 0px 5px 0px 0px #FF00FF;
+
+	&:hover {
+ 		background: tint($mid-purple, 25%);
+ 		box-shadow: 0px 5px 0px 0px #FF00FF;
+	}
+
+	&:active {
+		background: shade($mid-purple, 25%);
+	}
+}
+
+.levelBigger {
+	@media only screen and (min-width: 0px){
+		display: block;
+		font-size: rem(36);
+		text-align: center;
+		p{
+			text-shadow: 0px 1px 0px #FFF;
+		}
+		a.goBack{
+			font-size: rem(18);
+			background-color: $mid-purple;
+			box-shadow: 0px 5px 0px 0px #FF00FF;
+
+			&:hover {
+		 		background: tint($mid-purple, 25%);
+		 		box-shadow: 0px 5px 0px 0px #FF00FF;
+			}
+
+			&:active {
+				background: shade($mid-purple, 25%);
+			}
+		}
+	}
+	@media only screen and (min-width: 601px){
+		display: none;
+	}
+}
+
+.scoreMessage {
+
+}
+.scoreResult {
+	i.material-icons {
+	    font-size: rem(65);
+	    bottom: -6px;
+	    position: relative;
+	}
+	margin: 40px 0;
+	font-family: 'Dosis', arial, sans-serif;
+	font-size: rem(65);
+	color: $mid-purple;
+	text-align: center;
+}
+

@@ -1,0 +1,95 @@
+<!-- login and signup -->
+
+<template name="login_sign">
+	<div class="row">
+		<section class="register_login col l8 offset-l2 m8 offset-m2 s8 offset-s2">
+				<button data-target="modal-signup" class="signup waves-effect modal-trigger button col l5 m5 s12">Join Now</button>
+			<div class="or col l2 m2 s12">
+				<p>OR</p>
+			</div>
+				<button data-target="modal-login" class="login waves-effect modal-trigger button col l5 m5 s12">Continue The Fight</button>
+		</section>	
+	</div>
+</template>
+
+<template name="Signup">
+	<div id="modal-signup" class="signup_login_modal modal modal-fixed-footer">
+		<form class="signup">
+			<div class="modal-content">
+		      <h4 class="center-align">Join Now</h4>
+		      <div class="row">
+		      	<section class="normal_signup col s12 m12 l6">
+		      		<div class="input-field col s12">
+		      			<i class="material-icons prefix">face</i>
+			          	<input id="username" type="text" class="validate">
+			          	<label for="username" data-success="Good name!">Nickname(In game)</label>
+			        </div>
+			        <div class="input-field col s12">
+			        	<i class="material-icons prefix">mail_outline</i>
+			          	<input id="email" type="email" class="validate">
+			          	<label for="email" data-error="Try again?" data-success="Great Job!">Email Address</label>
+			        </div>
+			        <div class="input-field col s12">
+			        	<i class="material-icons prefix">lock</i>
+			          	<input id="password" type="password" class="validate">
+			          	<label for="password" data-success="Secure!">Password</label>
+			        </div>
+		      	</section>
+		      	<section class="social_signup col s12 m12 l6">
+		      		<h5 class="social_head col s12">Or With</h5>
+		      		<div class="social_space col s12">
+		      			<a class="social_btn face_btn modal-close waves-effect waves-light btn-large">Facebook SignUp</a>
+		      		</div>
+		      		<div class="col s12">
+		      			<a class="social_btn twitter_btn modal-close waves-effect waves-light btn-large">Twitter SignUp</a>
+		      		</div>	      		
+		      	</section>
+		      </div>
+		    </div>
+
+		    <div class="modal-footer">
+		      <button type="submit" name="action" class="modal-action modal-close waves-effect waves-gree btn-flat">SignUp</button>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-oran btn-flat">Close</a>
+		    </div>
+	    </form>
+	</div>
+</template>
+
+<template name="Login">
+
+	<div id="modal-login" class="signup_login_modal modal modal-fixed-footer">
+		<form class="login">
+			<div class="modal-content">
+		      <h4 class="center-align">Login</h4>
+		      <div class="row">
+		      	<section class="normal_login col s12 m12 l6">
+			        <div class="input-field col s12">
+			        	<i class="material-icons prefix">mail_outline</i>
+			          	<input id="email_login" type="email" class="validate">
+			          	<label for="email_login" data-error="Try again?" data-success="Great Job!">Email Address</label>
+			        </div>
+			        <div class="input-field col s12">
+			        	<i class="material-icons prefix">lock</i>
+			          	<input id="password_login" type="password" class="validate">
+			          	<label for="password_login" data-success="Secure!">Password</label>
+			        </div>
+		      	</section>
+		      	<section class="social_login col s12 m12 l6">
+		      		<h5 class="social_head col s12">Or With</h5>
+		      		<div class="social_space col s12">
+		      			<a class="social_btn face_btn modal-close waves-effect waves-light btn-large">Facebook Login</a>
+		      		</div>
+		      		<div class="col s12">
+		      			<a class="social_btn twitter_btn modal-close waves-effect waves-light btn-large">Twitter login</a>
+		      		</div>	      		
+		      	</section>
+		      </div>
+		    </div>
+		    <div class="modal-footer">
+				<button type="submit" name="action" class="modal-action modal-close modal-close waves-effect waves-gree btn-flat">Login</button>
+		      <a href="#!" class="modal-action modal-close waves-effect waves-oran btn-flat">Close</a>
+		    </div>
+	    </form>
+	</div>
+
+</template>

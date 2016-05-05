@@ -1,0 +1,463 @@
+//variables
+
+$dark-purple: #4A285D;
+$mid-purple: #A400EB;
+$light-purple: #FF00FF;
+$city-orange: #F39300;
+$city-green: #00F393;
+
+$facebook-blue: #3B5998;
+$twitter-blue: #4099FF;
+
+$paragraph-grey: #535353;
+$border-grey: #979797;
+
+
+@import "{wolves:bourbon}/bourbon";
+@import "login-signup";
+@import "img-radio";
+@import "swiper";
+@import "levels";
+@import "leaderboard";
+@import "{poetic:materialize-scss}/sass/materialize.scss";
+
+body{
+	@media only screen and (min-width: 0px){
+		overflow-x: hidden;
+		margin: 0;
+	  	font-family:'Roboto', arial, sans-serif;
+	  	font-size: rem(18);
+	  	color: $paragraph-grey;
+	  	display: flex;
+	  	min-height: 100vh;
+	  	flex-direction: column;
+		background-color: #fff;
+		background-image: url("/images/background_small.svg");
+		background-size: cover;
+		background-position: center rem(0);
+		background-repeat: no-repeat;
+	}
+	@media only screen and (min-width: 993px){
+		background-image: url("/images/bg.svg");
+	}
+
+	header.user_header{
+		margin-top: 20px;
+		section{
+			div{
+				color: $dark-purple;
+				@media only screen and (min-width: 0px){
+					font-size: rem(12);
+					text-shadow: 0px 2px 0px #FFF;
+				}
+				@media only screen and (min-width: 601px){
+					font-size: rem(24);
+				}
+			}
+			.dropdown-button {
+				color: $mid-purple;
+				background-color: transparent;
+
+
+				&:hover{
+					color: tint($mid-purple, 25%);
+				}
+				&:active{
+					color: shade($mid-purple, 25%);
+				}
+				i.right {
+					@media only screen and (min-width: 0px){
+					font-size: rem(18);
+					}
+					@media only screen and (min-width: 601px){
+						font-size: rem(30);
+					}
+				}
+
+			}
+			.dropdown-content{
+				a{
+					@media only screen and (min-width: 0px){
+						color: $city-orange;
+						font-size: rem(12);
+					}
+					@media only screen and (min-width: 601px){
+						font-size: rem(18);
+					}
+				}
+			}
+		}
+	}
+
+	main {
+		min-height: 100%;
+		flex: 1 0 auto;
+		height: 100%;
+		.logo {
+			display: block;
+			margin: rem(35) auto rem(45) auto;
+			height: auto;
+		}
+		section.register_login{
+			@media only screen and (min-width: 0px){
+				display: block;
+				margin-top: rem(0);
+				color: #464646;
+				font-size: rem(35);
+				font-family: 'Dosis', arial, sans-serif;
+				font-weight: 800;
+				line-height: 0;
+			}
+			@media only screen and (min-width: 601px){
+				margin-top: rem(150);
+			}
+			@media only screen and (min-height: 600px){
+				margin-top: rem(0);
+			}
+			@media only screen and (min-width: 700px){
+				margin-top: rem(0);
+			}
+
+			@media only screen and (min-width: 993px) and (min-height: 700px){
+				margin-top: rem(0);
+			}
+			@media only screen and (min-width: 710px) and (min-height: 993px){
+				margin-top: rem(150);
+			}
+			@media only screen and (min-width: 1000px) and (min-height: 700px){
+				margin-top: rem(150);
+			}
+			@media only screen and (min-width: 1200px){
+				margin-top: rem(0);
+			}
+
+			button {
+				border-radius: rem(8);
+				width: 100%;
+				height: rem(80);
+				border: none;
+				line-height: 1.2;
+				font-family: 'Dosis', arial, sans-serif;
+				font-weight: 800;
+				color: #fff;
+				font-size: rem(18);
+
+				&:focus {outline: 0;}
+
+			}
+			.signup {
+					background-color: $mid-purple;
+					box-shadow: 0px 5px 0px 0px #FF00FF;
+
+					&:hover {
+				 		background: tint($mid-purple, 25%);
+					}
+
+					&:active {
+						background: shade($mid-purple, 25%);
+					}
+			}
+			.login{
+				background: $light-purple;
+				box-shadow: 0px 5px 0px 0px #4E1D6D;
+
+				&:hover {
+				 		background: tint($light-purple, 25%);
+					}
+				&:active {
+				 		background: shade($light-purple, 25%);
+					}
+			}
+			p{
+				text-align: center;
+			}
+		}
+
+		section.intro {
+			margin-top: rem(25);
+			text-align: center;
+		}
+		section.custom_intro {
+			font-family: 'Dosis', arial, sans-serif;
+			color: $dark-purple;
+			font-size: rem(20);
+			@media only screen and (min-width: 0px){
+				margin-top: rem(300);
+			}
+			@media only screen and (min-width: 601px){
+				margin-top: 0;
+			}
+		}
+		section.custom_slide {
+			@media only screen and (min-width: 0px){
+				background-color: #fff;
+				height: 350px;
+				border-radius: 5px;
+				border: 3px $dark-purple solid;
+			}
+			@media only screen and (min-width: 601px){
+				margin-top: 0;
+			}
+			.tabs{
+				font-family: 'Dosis', arial, sans-serif;
+				font-size: rem(30);
+				
+				li a{
+					color: $city-orange;
+					&:hover{
+						color: tint($city-orange, 45%);
+					}
+
+				}
+				.active{
+						color: $city-green;
+						&:hover{
+							color: tint($city-green, 45%);
+						}
+					}
+			}
+			.indicator {
+				background-color: $city-green;
+			}
+		}
+		section.avatar_btns {
+			margin-top: rem(10);
+			a.cancel{
+				background-color: $mid-purple;
+					box-shadow: 0px 5px 0px 0px #FF00FF;
+
+					&:hover {
+				 		background: tint($mid-purple, 25%);
+					}
+
+					&:active {
+						background: shade($mid-purple, 25%);
+					}
+			}
+			#saveAvatar{
+				background: $light-purple;
+				box-shadow: 0px 5px 0px 0px #4E1D6D;
+
+				&:hover {
+				 		background: tint($light-purple, 25%);
+					}
+				&:active {
+				 		background: shade($light-purple, 25%);
+					}
+			}
+		}
+	
+	}
+	// header for pages
+	h4 {
+		font-size: rem(48);
+		font-family: 'Dosis', sans-serif;
+		font-weight: 600;
+		color: $dark-purple;
+	}
+
+	footer {
+		width: 100%;
+		height: 50px;
+		font-size: rem(12);
+		.row{margin-bottom: 0;}
+		section.social {
+			@media only screen and (min-width: 0px){
+				span {
+					position: relative;
+					bottom: 10px;
+				}
+				a{
+					margin: 0 10px;
+					&:last-child{
+						margin-right: 0;
+					}
+					i.fa {
+						font-size: rem(45);
+					}
+					.fa-facebook-square {
+						color: $facebook-blue;
+					}
+					.fa-twitter-square {
+						color: $twitter-blue;
+					}
+				}
+			}
+			@media only screen and (min-width: 601px){
+				text-align: left;
+			}
+		}
+
+			span.sign {
+				@media only screen and (min-width: 0px){
+					position: relative;
+					bottom: -15px;
+				}
+				@media only screen and (min-width: 601px){
+					text-align: right;
+				}
+			}
+		
+	}	
+
+	section.avatar_container {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			top: rem(150);
+			position: absolute;
+			left: rem(-45);
+			img{
+				position: absolute;
+				height: rem(300);
+			}
+		}
+		@media only screen and (min-width: 601px){
+			top: rem(130);
+			left: rem(-85);
+			img{
+				position: absolute;
+				height: rem(500);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+			top: rem(90);
+			left: rem(-85);
+
+		}
+		@media only screen and (min-width: 1200px){
+			top: rem(90);
+			left: rem(0);
+		}
+		
+	}
+	section.avatar_customise {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			top: rem(0);
+			position: relative;
+			padding: 50px 50px 50px 0px;
+			display: none;
+
+			img{
+				position: absolute;
+				height: rem(300);
+			}
+		}
+		@media only screen and (min-width: 601px){
+			top: rem(0);
+			left: rem(-85);
+			display: table-row;
+			img{
+				position: absolute;
+				height: rem(500);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+			top: rem(0);
+			left: rem(-85);
+
+		}
+		@media only screen and (min-width: 1200px){
+			top: rem(0);
+			left: rem(0);
+		}
+
+		
+	}
+	section.avatar_customise_mobile {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			padding: 50px 0;
+			display: block;
+
+			img{
+				position: absolute;
+				height: rem(300);
+				width: 100%;
+				left: -20px;
+			}
+		}
+		@media only screen and (min-width: 601px){
+			display: none;
+			img{
+				position: absolute;
+				height: rem(500);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+
+
+		}
+		@media only screen and (min-width: 1200px){
+
+		}
+
+		
+	}
+	section.hexabunnies {
+		@media only screen and (min-width: 0px){
+			z-index: -1;
+			top: rem(80);
+			position: absolute;
+			right: rem(10);
+			img{				
+				height: rem(200);
+			}
+		}
+		@media only screen and (min-width: 601px){
+			top: rem(40);
+			right: rem(10);
+			img{				
+				height: rem(400);
+			}
+		}
+		@media only screen and (min-width: 993px){
+			top: rem(30);
+			right: rem(10);
+
+		}
+		@media only screen and (min-width: 1200px){
+			top: rem(30);
+			right: rem(35);
+
+		}
+	}
+	
+}
+
+blockquote {
+	border-left: 2px solid $light-purple;
+}
+strong {
+	font-weight: 600;
+}
+code {
+	background-color: tint($border-grey, 50%);
+	padding: 5px;
+	border-radius: 5px;
+}
+.forShow {
+	padding-left: 40px;
+	li {
+		list-style: circle;
+	}
+	
+}
+.collection a.collection-item {
+	color: $dark-purple;
+}
+.stars{color: $dark-purple;}
+.starIcon {
+	padding-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.accIcon {
+	padding-right: 50px;
+    position: relative;
+    top: 5px;
+}
+

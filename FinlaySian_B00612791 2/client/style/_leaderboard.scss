@@ -1,0 +1,49 @@
+// leaderboard
+
+section.card {
+  padding: rem(10) 0;
+	div.avatarLead {
+		@media only screen and (min-width: 0px){
+			height: rem(300);
+			top: rem(0);
+			position: relative;
+			
+
+			img{
+				left: rem(-20);
+				position: absolute;
+				height: rem(300);
+			}
+		}
+		@media only screen and (min-width: 601px){
+			top: rem(0);
+			height: rem(200);
+			display: block;
+			img{
+				left: rem(-20);
+				position: absolute;
+				height: rem(200);
+			}
+
+		}
+		@media only screen and (min-width: 993px){
+			top: rem(0);
+
+		}
+		@media only screen and (min-width: 1200px){
+			top: rem(0);
+			left: rem(0);
+		}
+	}
+	.card-content {
+		p {
+			color: $dark-purple;
+			i.starLeader {
+				padding-right: rem(10);
+			    position: relative;
+			    top: 5px;
+			}
+		}
+
+	}
+}
