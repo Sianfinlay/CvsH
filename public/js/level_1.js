@@ -1,7 +1,7 @@
-// uses http://konvajs.github.io/, and following the 'animals on the beach' demo, 
-// modified for use in major project, uses the original functions such as 'loadImages' and 'isNearOutline' etc 
+// uses http://konvajs.github.io/, and following the 'animals on the beach' demo,
+// modified for use in major project, uses the original functions such as 'loadImages' and 'isNearOutline' etc
 // events and such are part of the konvaJS framework
-// main changes are the addition of jQuery send messages and form to collection requests, 
+// main changes are the addition of jQuery send messages and form to collection requests,
 // creation of functions to allow drag objects to snap to any 'snappable' area
 
 var width = window.innerWidth;
@@ -105,7 +105,7 @@ $('#newScore').val(score);
                     id: key
                 });
                 console.log("snip:"+ JSON.stringify(snip));
-                
+
                 // function to created to take any code image so it can be dragged and snapped into place
                 function snapTo(code, outlineSnap) {
                     var outline = outlines[outlineSnap + '_black'];
@@ -114,13 +114,13 @@ $('#newScore').val(score);
                             x : outline.x,
                             y : outline.y
                         });
-                        
+
                         console.log("privKey:"+ privKey);
                         console.log("Key:"+ key);
                         console.log(code.id());
                         codeLayer.draw();
                         var testKey = privKey+ "_black";
-                        
+
 
                         // removes drag ability to object
                         // commented out incase score bug is though to be easily abused
@@ -146,9 +146,9 @@ $('#newScore').val(score);
                     snapTo(code, "pstart");
                     snapTo(code, "pend");
 
-                    
 
-                    // if in right place give 1 point 
+
+                    // if in right place give 1 point
                     if(isNearOutline(code, outlines[privKey + '_black'])) {
                         if(privKey == code.id()){
                             score += 1;
@@ -171,14 +171,15 @@ $('#newScore').val(score);
                     }
 
                     // not in right place take away score
-                    if(!isNearOutline(code, outlines[privKey + '_black'])) {                     
+                    if(!isNearOutline(code, outlines[privKey + '_black'])) {
                         codeLayer.draw();
                         if(score == 0){
+                            $('#newScore').val(score); 
                             console.log("no score")
                         }
                         else {
 
-                           score -= 1; 
+                           score -= 1;
                            $('#newScore').val(score);
                         }
                         console.log(score);
